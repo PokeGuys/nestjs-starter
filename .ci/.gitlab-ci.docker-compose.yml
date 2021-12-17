@@ -1,0 +1,85 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  DOCKER_VERSION: '20.10.2'
+
+.setup:
+  before_script:
+    - |
+      # Environment based variables
+      if [ "master" == "${CI_COMMIT_BRANCH}" ]; then
+        for env_value in $(bash -i -c "compgen -v" |grep '.*_PRODUCTION$'); do
+          eval export ${env_value%_PRODUCTION}="${!env_value}"
+        done
+        export ENVIRONMENT="production"
+      else
+        for env_value in $(bash -i -c "compgen -v" |grep '.*_DEVELOPMENT$'); do
+          eval export ${env_value%_DEVELOPMENT}="${!env_value}"
+        done
+        export ENVIRONMENT="development"
+      fi
+    - |
+      # AWS related variables
+      set -e
+      tag_build_num="v${CI_PIPELINE_ID}-build"
+      export CI_REGISTRY="${AWS_REGISTRY_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
+      export IMAGE="${CI_REGISTRY}/${AWS_ECR_NAME}:$tag_build_num"
+      export IMAGE_LATEST="${CI_REGISTRY}/${AWS_ECR_NAME}:latest"
+      export IMAGE_INSTALLER=installer
+      export IMAGE_TEST=test
+
+.docker: &docker
+  image: docker:${DOCKER_VERSION}
+  services:
+    - docker:${DOCKER_VERSION}-dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ''
+  before_script:
+    - |
+      # install awscli v2 for ecr upload
+      apk add --no-cache curl unzip docker-compose
+      curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
+      unzip /tmp/awscliv2.zip -d /tmp
+      sudo /tmp/aws/install
+    - !reference [.setup, before_script]
+
+test and build:
+  <<: *docker
+  stage: build
+  script:
+    # Seup infra for testing
+    - docker-compose -f docker-compose.infra.yml up -d
+    # Build test image
+    - docker-compose -f docker-compose.ci.yml build app-test
+    # Run the test
+    - docker-compose -f docker-compose.ci.yml run  -v "$PWD/coverage:/srv/coverage" app-test
+    # Build swagger generator image
+    - docker-compose -f docker-compose.ci.yml build swagger-gen
+    # Generate swagger definition
+    - docker-compose -f docker-compose.ci.yml run  -v "$PWD/s3_swagger:/s3_swagger" swagger-gen
+    # Build the runtime image
+    - |
+      docker build -f .docker/Dockerfile -t "${IMAGE}" -t "${IMAGE_LATEST}" \
+        --build-arg COMMIT_HASH=${CI_COMMIT_SHORT_SHA} \
+        --build-arg PIPELINE_ID=${CI_PIPELINE_ID} \
+        .
+  when: manual
+
+deploy:
+  <<: *docker
+  stage: deploy
+  script:
+    # Login to AWS ECR
+    - aws ecr get-login-password | docker login --username AWS --password-stdin ${CI_REGISTRY}
+    # Push the images to ECR
+    - docker push "$IMAGE" && docker push "$IMAGE_LATEST"
+    # Push the swagger definition to S3
+    - aws s3 sync ./s3_swagger s3://${AWS_S3_BUCKET_SWAGGER}/${CI_PROJECT_NAME}/${CI_COMMIT_REF_SLUG} --region ${AWS_REGION_SWAGGER} --delete
+  only:
+    - master
+    - develop
+    - release
+  needs: ['build']

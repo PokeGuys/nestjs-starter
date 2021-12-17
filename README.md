@@ -1,0 +1,71 @@
+# NestJS Starter Kit
+
+Fastify based NestJS Starter kit
+
+## Features
+
+- [ ] Fastify
+- [ ] Terminus
+  - [ ] MikroOrmHealthIndicator
+  - [ ] RedisHealthIndicator
+- [ ] Firebase Admin
+- [ ] Redis
+- [ ] ElasticSearch
+- [ ] Task Queue
+  - [ ] Mail Worker
+  - [ ] SMS Worker
+- [ ] Authentication
+  - [ ] Passwordless
+    - [ ] Email-link
+    - [ ] SMS
+    - [ ] U2F
+  - [ ] OAuth
+    - [ ] Google
+    - [ ] Facebook
+    - [ ] Twitter
+    - [ ] GitHub
+  - [ ] Password
+    - [ ] Email
+    - [ ] Username
+    - [ ] UserId
+    - [ ] Phone
+  - [ ] MFA
+    - [ ] TOTP
+    - [ ] U2F
+- [ ] Authorization
+  - [ ] RBAC
+  - [ ] CASL
+- [ ] Cron job
+- [ ] Swagger
+  - [ ] Swagger specification file
+  - [ ] Swagger UI
+  - [ ] ReDoc
+- [ ] File upload
+  - [ ] Dir
+  - [ ] S3
+  - [ ] GCS
+- [ ] Event Bus
+- [ ] Coding Style
+  - [x] Husky
+    - [x] pre-commit
+      - [x] pnpm commitlint -c .commitlintrc.json -e $GIT_PARAMS
+    - [x] commit-msg
+      - [x] pnpm lint-staged
+    - [x] pre-push
+      - [x] pnpm lint && pnpm build && pnpm test
+  - [x] Lintstaged
+    - [x] sort-package-json
+    - [x] prettier
+    - [x] import-sort
+  - [x] Prettier
+  - [ ] ESLint
+    - [ ] eslint-plugin-promise (eslint 8 support)
+    - [x] eslint-plugin-jest
+    - [x] eslint-plugin-airbnb
+    - [x] eslint-plugin-prettier
+    - [x] eslint-plugin-import
+- [x] Dependency bot
+  - [x] Renovate bot
+- [x] Docker
+  - [x] Image
+  - [x] Compose

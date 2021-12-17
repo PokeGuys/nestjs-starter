@@ -1,0 +1,48 @@
+# Versioning and metadata
+.git
+.github
+.gitignore
+.dockerignore
+.docker
+Dockerfile
+docker-compose.yml
+
+# Build dependencies
+dist
+docs
+node_modules
+coverage
+
+# Environment (contains sensitive data)
+credentials
+.env
+.env.demo
+.env.example
+
+# Files not required for production
+.vscode
+nest-cli.json
+test
+README.md
+
+# Development configuration files
+.husky
+.commitlintrc.json
+.editorconfig
+.eslintignore
+.eslintrc.js
+.importsortrc.yml
+.lintstagedrc.json
+.prettierignore
+.prettierrc
+tsconfig.json
+tsconfig.build.json
+
+# Bot configuration files
+.renovaterc
+
+# CI files
+.ci
+.travis.yml
+.gitlab-ci.yml
+.drone.yml

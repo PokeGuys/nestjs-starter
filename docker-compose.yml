@@ -1,0 +1,85 @@
+version: '3.9'
+
+services:
+  api:
+    build:
+      context: .docker
+      dockerfile: Dockerfile
+    environment:
+      - PORT=3000
+    ports:
+      - '${PORT:-3000}:3000'
+    volumes:
+      - '.env.demo:/srv/.env'
+
+  # MongoDB
+  mongodb:
+    image: mongo:5
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: nestjs_starter
+    ports:
+      - '${MONGODB_PORT:-27017}:27017'
+
+  mongo-express:
+    image: mongo-express:0.54
+    restart: always
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongodb:27017
+    ports:
+      - '${MONGODB_EXPRESS_PORT:-8081}:8081'
+    depends_on:
+      - mongodb
+
+  # PostgreSQL
+  postgres:
+    image: postgres:13
+    environment:
+      - 'POSTGRES_USER=nestjs'
+      - 'POSTGRES_PASSWORD=example'
+      - 'POSTGRES_DB=nestjs'
+      - 'PGDATA=/var/lib/postgresql/data/pgdata'
+    ports:
+      - '${PG_PORT:-5432}:5432'
+    volumes:
+      - ./.docker/postgres/data:/var/lib/postgresql/data
+
+  # Redis
+  redis-standalone:
+    image: redis:6.2-alpine
+    ports:
+      - '${REDIS_PORT:-6379}:6379'
+    volumes:
+      - './.docker/redis/data:/data'
+
+  # Redis Cluster (localhost)
+  redis-cluster-localhost-access:
+    image: grokzen/redis-cluster:5.0.12
+    environment:
+      IP: '0.0.0.0'
+      INITIAL_PORT: 7000
+      MASTERS: 3
+      SLAVES_PER_MASTER: 1
+    ports:
+      ## INITIAL_PORT ~ (INITIAL_PORT + MASTERS * (1 + SLAVES_PER_MASTER) -1)
+      - '${REDIS_CLUSTER_PORT_RANGE:-7000-7005}:7000-7005'
+
+  redis-cluster:
+    image: grokzen/redis-cluster:5.0.12
+    environment:
+      INITIAL_PORT: 7000
+      MASTERS: 3
+      SLAVES_PER_MASTER: 1
+
+  # RabbitMQ
+  rabbitmq:
+    image: 'rabbitmq:3.9.8-management'
+    environment:
+      - RABBITMQ_DEFAULT_USER=root
+      - RABBITMQ_DEFAULT_PASS=example
+    ports:
+      - '${RABBITMQ_NODE_HOST_PORT:-5672}:5672'
+      - '${RABBITMQ_MANAGEMENT_HTTP_HOST_PORT:-15672}:15672'

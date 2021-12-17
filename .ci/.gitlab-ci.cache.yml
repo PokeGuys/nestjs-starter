@@ -1,0 +1,111 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  DOCKER_VERSION: '20.10.2'
+  NODE_VERSION: '16'
+  PNPM_VERSION: '6.16'
+
+cache: &global_cache
+  untracked: true
+  # Cached by branch name
+  key: '$CI_COMMIT_REF_SLUG'
+  paths:
+    - .pnpm-store
+  policy: pull-push
+
+.setup:
+  before_script:
+    # Environment based variables
+    - |
+      if [ "master" == "${CI_COMMIT_BRANCH}" ]; then
+        for env_value in $(compgen -v |grep '.*_PRODUCTION$'); do
+          eval export ${env_value%_PRODUCTION}="${!env_value}"
+        done
+        export ENVIRONMENT="production"
+      else
+        for env_value in $(compgen -v |grep '.*_DEVELOPMENT$'); do
+          eval export ${env_value%_DEVELOPMENT}="${!env_value}"
+        done
+        export ENVIRONMENT="development"
+      fi
+    # AWS related variables
+    - |
+      set -e
+      tag_build_num="v${CI_PIPELINE_ID}-build"
+      export CI_REGISTRY="${AWS_REGISTRY_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
+      export IMAGE="${CI_REGISTRY}/${AWS_ECR_NAME}:$tag_build_num"
+      export IMAGE_LATEST="${CI_REGISTRY}/${AWS_ECR_NAME}:latest"
+      export IMAGE_INSTALLER=installer
+
+# Setup docker cli with aws-base image
+.docker: &docker
+  image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
+  services:
+    - docker:${DOCKER_VERSION}-dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ''
+  before_script:
+    - |
+      curl "https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKER_VERSION}.tgz" -o "/tmp/docker.tar.gz"
+      tar -xzf /tmp/docker.tar.gz -C /tmp/
+      cp /tmp/docker/docker* /usr/bin
+      chmod +x /usr/bin/docker*
+      rm -rf /tmp/*
+    - !reference [.setup, before_script]
+
+# Setup pnpm
+.pnpm: &pnpm
+  image: node:${NODE_VERSION}-alpine
+  before_script:
+    - curl -f https://get.pnpm.io/v${PNPM_VERSION}.js | node - add --global pnpm@6
+    - pnpm config set store-dir .pnpm-store
+    - !reference [.setup, before_script]
+
+test and build:
+  <<: *pnpm
+  stage: build
+  script:
+    # stage: prepare (prepare-cache)
+    - pnpm install --frozen-lockfile
+    # stage: test (lint)
+    - pnpm lint
+    # stage: test (unit-test)
+    - pnpm test:cov
+    # stage: test (integration-test)
+    - pnpm test:e2e --coverage
+    # stage: build (build)
+    - pnpm build
+  when: manual
+
+build and publish image:
+  <<: *docker
+  stage: deploy
+  cache: {}
+  script:
+    # Build installer image
+    - docker build -t ${IMAGE_INSTALLER} --target installer .
+    # Generate swagger definition
+    - |
+      docker run --rm -v $PWD/s3_swagger:/s3_swagger --entrypoint "" ${IMAGE_INSTALLER} bash -c
+      'pnpm swagger:build && cp -r /app/docs/* /s3_swagger/'
+    # Build runtime image
+    - |
+      docker build -f .docker/Dockerfile -t "${IMAGE}" -t "${IMAGE_LATEST}" \
+        --build-arg COMMIT_HASH=${CI_COMMIT_SHORT_SHA} \
+        --build-arg PIPELINE_ID=${CI_PIPELINE_ID} \
+        .
+    # Login to AWS ECR
+    - aws ecr get-login-password | docker login --username AWS --password-stdin ${CI_REGISTRY}
+    # Push the images to ECR
+    - docker push "$IMAGE" && docker push "$IMAGE_LATEST"
+    # Push the swagger definition to S3
+    - aws s3 sync ./s3_swagger s3://${AWS_S3_BUCKET_SWAGGER}/${CI_PROJECT_NAME}/${CI_COMMIT_REF_SLUG} --region ${AWS_REGION_SWAGGER} --delete
+  only:
+    - master
+    - develop
+    - release
+  when: on_success
+  needs: ['build']
