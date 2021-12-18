@@ -1,5 +1,5 @@
-import { S3Config } from '@config/interfaces';
 import { S3_CONFIG_NAMESPACE } from '@common/constants/config.constants';
+import { S3Config } from '@config/interfaces';
 import { registerAs } from '@nestjs/config';
 
 export const s3Config = registerAs(S3_CONFIG_NAMESPACE, (): S3Config => {

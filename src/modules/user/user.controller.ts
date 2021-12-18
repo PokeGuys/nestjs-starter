@@ -1,5 +1,4 @@
 import { Controller, Get, Param } from '@nestjs/common';
-
 import { ApiTags } from '@nestjs/swagger';
 import { UserDto } from './dto/responses/user.dto';
 import { UserParam } from './dto/user.param';

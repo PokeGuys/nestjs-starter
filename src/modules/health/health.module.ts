@@ -1,7 +1,7 @@
+import { MikroOrmModule } from '@mikro-orm/nestjs';
+import { HealthController } from '@modules/health/health.controller';
 import { MikroOrmHealthIndicator, RedisHealthIndicator } from '@modules/health/indicators';
 
-import { HealthController } from '@modules/health/health.controller';
-import { MikroOrmModule } from '@mikro-orm/nestjs';
 import { Module } from '@nestjs/common';
 import { TerminusModule } from '@nestjs/terminus';
 

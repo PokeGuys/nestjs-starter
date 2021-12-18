@@ -1,10 +1,10 @@
+import { DECIMAL_RADIX_BASE } from '@common/constants/common.constants';
 import {
   DEFAULT_HTTP_BIND_HOST,
   DEFAULT_HTTP_BIND_PORT,
   HTTP_CONFIG_NAMESPACE,
 } from '@common/constants/config.constants';
 
-import { DECIMAL_RADIX_BASE } from '@common/constants/common.constants';
 import { HttpConfig } from '@config/interfaces';
 import { registerAs } from '@nestjs/config';
 

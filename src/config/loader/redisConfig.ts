@@ -1,6 +1,6 @@
+import { DECIMAL_RADIX_BASE } from '@common/constants/common.constants';
 import { DEFAULT_REDIS_PORT, REDIS_CONFIG_NAMESPACE } from '@common/constants/config.constants';
 
-import { DECIMAL_RADIX_BASE } from '@common/constants/common.constants';
 import { RedisConfig } from '@config/interfaces';
 import { registerAs } from '@nestjs/config';
 

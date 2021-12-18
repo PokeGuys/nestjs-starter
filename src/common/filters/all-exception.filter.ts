@@ -1,3 +1,4 @@
+import { EXCEPTION_HANDLER_NAME } from '@common/constants/exception.constants';
 import {
   ApiException,
   InternalServerException,
@@ -15,7 +16,6 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 
-import { EXCEPTION_HANDLER_NAME } from '@common/constants/exception.constants';
 import { FastifyReply } from 'fastify';
 import { I18nService } from 'nestjs-i18n';
 

@@ -1,5 +1,5 @@
-import { IEntity } from '@common/models';
 import { UserStatus } from '@common/enum';
+import { IEntity } from '@common/models';
 
 export type UserType = IEntity & {
   status: UserStatus;

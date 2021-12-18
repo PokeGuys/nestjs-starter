@@ -1,4 +1,3 @@
-import { IsInt, IsNotEmpty, IsString } from 'class-validator';
 import {
   PAGINATION_DEFAULT_COUNT,
   PAGINATION_MAXIMUM_COUNT,
@@ -8,8 +7,8 @@ import {
   PAGINATION_PAGE_TOKEN_DESCRIPTION,
   PAGINATION_PAGE_TOKEN_EXAMPLE,
 } from '@common/constants/swagger.constants';
-
 import { ApiProperty } from '@nestjs/swagger';
+import { IsInt, IsNotEmpty, IsString } from 'class-validator';
 
 export class CursorPaginationQuery {
   @IsInt()

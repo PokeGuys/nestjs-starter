@@ -1,3 +1,4 @@
+import { VALIDATION_ERROR } from '@common/constants/exception.constants';
 import {
   ERROR_CODE_DESCRIPTION,
   VALIDATION_ERROR_DETAILS_DESCRIPTION,
@@ -5,9 +6,8 @@ import {
 } from '@common/constants/swagger.constants';
 
 import { ApiException } from '@common/exceptions/api.exception';
-import { ApiProperty } from '@nestjs/swagger';
 import { HttpStatus } from '@nestjs/common';
-import { VALIDATION_ERROR } from '@common/constants/exception.constants';
+import { ApiProperty } from '@nestjs/swagger';
 
 export class ValidationException extends ApiException {
   @ApiProperty({

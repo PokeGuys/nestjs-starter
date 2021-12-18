@@ -1,10 +1,10 @@
 import { APP_CONFIG_NAMESPACE, HTTP_CONFIG_NAMESPACE } from '@common/constants/config.constants';
 
-import { BaseConfig } from '@config/interfaces';
-import { ConfigService } from '@nestjs/config';
-import { Logger } from '@nestjs/common';
-import { setupApplication } from '@src/app';
 import { setupSwagger } from '@common/swagger';
+import { BaseConfig } from '@config/interfaces';
+import { Logger } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
+import { setupApplication } from '@src/app';
 
 async function bootstrap() {
   // Setup nest application

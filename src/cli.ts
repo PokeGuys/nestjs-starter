@@ -1,9 +1,8 @@
-import { CommandModule, CommandService } from 'nestjs-command';
-
-import { COMMAND_LINE_NAMESPACE } from '@common/constants/command.constants';
 import { CliCommandModule } from '@commands/cli-command.module';
+import { COMMAND_LINE_NAMESPACE } from '@common/constants/command.constants';
 import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
+import { CommandModule, CommandService } from 'nestjs-command';
 
 async function bootstrap() {
   const app = await NestFactory.createApplicationContext(CliCommandModule);

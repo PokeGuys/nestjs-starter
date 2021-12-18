@@ -1,8 +1,8 @@
-import { ApiException } from '@common/exceptions/api.exception';
-import { ApiProperty } from '@nestjs/swagger';
-import { ERROR_CODE_DESCRIPTION } from '@common/constants/swagger.constants';
-import { HttpStatus } from '@nestjs/common';
 import { MODEL_NOT_FOUND } from '@common/constants/exception.constants';
+import { ERROR_CODE_DESCRIPTION } from '@common/constants/swagger.constants';
+import { ApiException } from '@common/exceptions/api.exception';
+import { HttpStatus } from '@nestjs/common';
+import { ApiProperty } from '@nestjs/swagger';
 
 export class EntityNotFoundException extends ApiException {
   @ApiProperty({

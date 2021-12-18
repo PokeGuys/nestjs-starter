@@ -1,8 +1,7 @@
-import { ArgumentMetadata, Injectable, PipeTransform, Type } from '@nestjs/common';
-import { ValidationError, ValidationError as ValidationErrorType, validate } from 'class-validator';
-import { classToPlain, plainToClass } from 'class-transformer';
-
 import { ValidationException } from '@common/exceptions';
+import { ArgumentMetadata, Injectable, PipeTransform, Type } from '@nestjs/common';
+import { classToPlain, plainToClass } from 'class-transformer';
+import { validate, ValidationError, ValidationError as ValidationErrorType } from 'class-validator';
 
 const normalizeError = (error: ValidationError): Array<string> =>
   error.constraints
@@ -20,7 +19,7 @@ export class ValidationPipe implements PipeTransform<any> {
     const errors = await validate(entity, {
       forbidNonWhitelisted: false,
       whitelist: true,
-      forbidUnknownValues: false,
+      forbidUnknownValues: true,
       validationError: {
         target: false,
         value: false,

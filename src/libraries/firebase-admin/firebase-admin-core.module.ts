@@ -1,12 +1,12 @@
-import { DynamicModule, Global, Module, Provider, Type } from '@nestjs/common';
+import { createClient, getClientToken } from '@libraries/firebase-admin/common';
+
+import { FIREBASE_ADMIN_MODULE_OPTIONS } from '@libraries/firebase-admin/firebase-admin.constants';
 import {
   FirebaseAdminModuleAsyncOptions,
   FirebaseAdminModuleOptions,
   FirebaseAdminOptionsFactory,
 } from '@libraries/firebase-admin/interfaces';
-import { createClient, getClientToken } from '@libraries/firebase-admin/common';
-
-import { FIREBASE_ADMIN_MODULE_OPTIONS } from '@libraries/firebase-admin/firebase-admin.constants';
+import { DynamicModule, Global, Module, Provider, Type } from '@nestjs/common';
 
 @Global()
 @Module({})

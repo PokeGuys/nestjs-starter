@@ -1,6 +1,15 @@
-import * as path from 'path';
-
+import { Language } from '@common/enum';
+import { AllExceptionFilter } from '@common/filters/all-exception.filter';
+import { ValidationPipe } from '@common/pipes/validation.pipe';
+import { validate } from '@config/env.validator';
+import { BaseConfig } from '@config/interfaces';
+import { appConfig, databaseConfig, httpConfig, mongodbConfig, redisConfig } from '@config/loader';
+import { RedisModule } from '@libraries/redis';
+import { MikroOrmModule } from '@mikro-orm/nestjs';
+import { Module } from '@nestjs/common';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { APP_FILTER, APP_PIPE } from '@nestjs/core';
+import { MongooseModule } from '@nestjs/mongoose';
 import {
   AcceptLanguageResolver,
   CookieResolver,
@@ -9,19 +18,7 @@ import {
   I18nModule,
   QueryResolver,
 } from 'nestjs-i18n';
-import { ConfigModule, ConfigService } from '@nestjs/config';
-import { appConfig, databaseConfig, httpConfig, redisConfig } from '@config/loader';
-
-import { AllExceptionFilter } from '@common/filters/all-exception.filter';
-import { BaseConfig } from '@config/interfaces';
-import { Language } from '@common/enum';
-import { MikroOrmModule } from '@mikro-orm/nestjs';
-import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
-import { RedisModule } from '@libraries/redis';
-import { ValidationPipe } from '@common/pipes/validation.pipe';
-import { validate } from '@config/env.validator';
-import { mongodbConfig } from '../config/loader/mongodbConfig';
+import * as path from 'path';
 import {
   APP_CONFIG_NAMESPACE,
   DATABASE_CONFIG_NAMESPACE,
