@@ -1,3 +1,4 @@
+import * as path from 'path';
 import { Language } from '@common/enum';
 import { AllExceptionFilter } from '@common/filters/all-exception.filter';
 import { ValidationPipe } from '@common/pipes/validation.pipe';
@@ -18,7 +19,6 @@ import {
   I18nModule,
   QueryResolver,
 } from 'nestjs-i18n';
-import * as path from 'path';
 import {
   APP_CONFIG_NAMESPACE,
   DATABASE_CONFIG_NAMESPACE,

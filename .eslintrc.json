@@ -28,6 +28,14 @@
       {
         "assertFunctionNames": ["expect", "request.**.expect"]
       }
+    ],
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "never",
+        "groups": ["builtin", "external", "internal"],
+        "warnOnUnassignedImports": true
+      }
     ]
   }
 }

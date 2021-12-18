@@ -1,5 +1,4 @@
 import { APP_CONFIG_NAMESPACE, HTTP_CONFIG_NAMESPACE } from '@common/constants/config.constants';
-
 import { setupSwagger } from '@common/swagger';
 import { BaseConfig } from '@config/interfaces';
 import { Logger } from '@nestjs/common';

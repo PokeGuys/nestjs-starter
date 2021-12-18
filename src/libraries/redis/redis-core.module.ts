@@ -14,7 +14,6 @@ import {
   Provider,
   Type,
 } from '@nestjs/common';
-
 import { ModuleRef } from '@nestjs/core';
 import { Redis } from 'ioredis';
 

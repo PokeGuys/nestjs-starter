@@ -2,7 +2,6 @@ import {
   USER_EMAIL_DESCRIPTION,
   USER_STATUS_DESCRIPTION,
 } from '@common/constants/swagger.constants';
-
 import { AbstractDto } from '@common/dto/abstract.dto';
 import { UserStatus } from '@common/enum/user-status.enum';
 import { User } from '@modules/user/models/user.entity';

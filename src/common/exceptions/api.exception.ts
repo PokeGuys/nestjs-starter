@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { HttpException, HttpStatus } from '@nestjs/common';
-
 import { ApiProperty } from '@nestjs/swagger';
 
 export type ExceptionData = {

@@ -4,7 +4,6 @@ import {
   VALIDATION_ERROR_DETAILS_DESCRIPTION,
   VALIDATION_ERROR_DETAILS_EXAMPLE,
 } from '@common/constants/swagger.constants';
-
 import { ApiException } from '@common/exceptions/api.exception';
 import { HttpStatus } from '@nestjs/common';
 import { ApiProperty } from '@nestjs/swagger';

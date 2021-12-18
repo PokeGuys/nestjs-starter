@@ -4,7 +4,6 @@ import {
   DEFAULT_HTTP_BIND_PORT,
   HTTP_CONFIG_NAMESPACE,
 } from '@common/constants/config.constants';
-
 import { HttpConfig } from '@config/interfaces';
 import { registerAs } from '@nestjs/config';
 

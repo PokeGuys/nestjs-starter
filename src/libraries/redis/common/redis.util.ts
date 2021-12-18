@@ -1,5 +1,4 @@
 import { RedisClient, RedisModuleOptions } from '@libraries/redis/interfaces';
-
 import { DEFAULT_CLIENT_NAME } from '@libraries/redis/redis.constants';
 import Redis from 'ioredis';
 
