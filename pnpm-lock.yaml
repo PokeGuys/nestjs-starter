@@ -48,7 +48,7 @@ specifiers:
   is-ci: 3.0.1
   jest: 27.4.4
   lint-staged: 12.1.2
-  mongoose: 6.1.1
+  mongoose: 6.1.2
   nestjs-command: 3.1.0
   nestjs-i18n: 8.2.2
   prettier: 2.5.1
@@ -75,7 +75,7 @@ dependencies:
   '@nestjs/common': 8.2.3_f8b67fbbfa59b70aa4035a6089ad771a
   '@nestjs/config': 1.1.5_4067a5d44d4606b10b1aff77c2f9d3cd
   '@nestjs/core': 8.2.3_4067a5d44d4606b10b1aff77c2f9d3cd
-  '@nestjs/mongoose': 9.0.1_5c23bb23d85d02a34ac5e838d6cddb3f
+  '@nestjs/mongoose': 9.0.1_44c8ad39b7b4fea2f29db0647c7d0987
   '@nestjs/platform-fastify': 8.2.3_4e195730d90113ce1578bd999274c7a8
   '@nestjs/swagger': 5.1.5_a29de12c8cbe789b354e0ba5ed337e54
   '@nestjs/terminus': 8.0.3_9516583cf3a5954b4b012ec1f447a027
@@ -87,7 +87,7 @@ dependencies:
   firebase-admin: 10.0.0
   ioredis: 4.28.2
   ioredis-mock: 5.8.1_e75c1a450aabdb99acd53e25108a8857
-  mongoose: 6.1.1
+  mongoose: 6.1.2
   nestjs-command: 3.1.0_36cdfd1bd3e577c47305ea3fd29ff5c4
   nestjs-i18n: 8.2.2_4372b83167cb83eca4251bc85a11a074
   redis-commands: 1.7.0
@@ -2190,7 +2190,7 @@ packages:
       reflect-metadata: 0.1.13
     dev: false
 
-  /@nestjs/mongoose/9.0.1_5c23bb23d85d02a34ac5e838d6cddb3f:
+  /@nestjs/mongoose/9.0.1_44c8ad39b7b4fea2f29db0647c7d0987:
     resolution: {integrity: sha512-TITKt5Q+k7PU5OmRcvQqqTdjBpAToFkP6LoLZ4n2DGm4jHh9iqX3Rkm8e7Ytwb5iWqGAAn1txcYJP8XO/H9Ixg==}
     peerDependencies:
       '@nestjs/common': ^6.0.0 || ^7.0.0 || ^8.0.0
@@ -2201,7 +2201,7 @@ packages:
     dependencies:
       '@nestjs/common': 8.2.3_f8b67fbbfa59b70aa4035a6089ad771a
       '@nestjs/core': 8.2.3_4067a5d44d4606b10b1aff77c2f9d3cd
-      mongoose: 6.1.1
+      mongoose: 6.1.2
       reflect-metadata: 0.1.13
       rxjs: 7.4.0
     dev: false
@@ -7758,8 +7758,8 @@ packages:
       whatwg-url: 11.0.0
     dev: false
 
-  /mongodb/4.2.1:
-    resolution: {integrity: sha512-nDC+ulM/Ea3Q2VG5eemuGfB7T4ORwrtKegH2XW9OLlUBgQF6OTNrzFCS1Z3SJGVA+T0Sr1xBYV6DMnp0A7us0g==}
+  /mongodb/4.2.2:
+    resolution: {integrity: sha512-zt8rCTnTKyMQppyt63qMnrLM5dbADgUk18ORPF1XbtHLIYCyc9hattaYHi0pqMvNxDpgGgUofSVzS+UQErgTug==}
     engines: {node: '>=12.9.0'}
     dependencies:
       bson: 4.6.0
@@ -7769,13 +7769,13 @@ packages:
       saslprep: 1.0.3
     dev: false
 
-  /mongoose/6.1.1:
-    resolution: {integrity: sha512-9IODOeFDxW0hzvGmE2Yvy/TaFGLIXQWgE/L1D/x3lKVo8PGyokklgnvX0/Qia7lxiZvxe6+na1aA7v0gT+TN+g==}
+  /mongoose/6.1.2:
+    resolution: {integrity: sha512-/CNxPVSPnaRNKndlhVOblFSB8kfpHWuAiJSEoVqs/pjS42actV7m/Wk0o0RbsndUvJ1WUenoXpbG8lrD9atGlQ==}
     engines: {node: '>=12.0.0'}
     dependencies:
       bson: 4.6.0
       kareem: 2.3.2
-      mongodb: 4.2.1
+      mongodb: 4.2.2
       mpath: 0.8.4
       mquery: 4.0.0
       ms: 2.1.2
