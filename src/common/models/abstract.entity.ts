@@ -1,7 +1,7 @@
+import { AbstractDto } from '@common/dto/abstract.dto';
 import { BlobType, Entity, PrimaryKey, Property } from '@mikro-orm/core';
 import { ClassConstructor, ClassTransformOptions, plainToClass } from 'class-transformer';
 
-import { AbstractDto } from '@common/dto/abstract.dto';
 import { v4 as uuidv4 } from 'uuid';
 import { IEntity } from './entity.interface';
 

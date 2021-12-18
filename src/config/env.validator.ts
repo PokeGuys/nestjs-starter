@@ -1,3 +1,5 @@
+import { AppEnvironment } from '@common/enum';
+import { plainToClass } from 'class-transformer';
 import {
   IsBoolean,
   IsEnum,
@@ -9,9 +11,6 @@ import {
   IsString,
   validateSync,
 } from 'class-validator';
-
-import { AppEnvironment } from '@common/enum';
-import { plainToClass } from 'class-transformer';
 
 class EnvironmentVariables {
   @IsNumber()

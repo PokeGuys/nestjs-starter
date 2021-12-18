@@ -1,11 +1,9 @@
-import * as path from 'path';
-
-import { Injectable, Logger } from '@nestjs/common';
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
-
-import { Command } from 'nestjs-command';
+import * as path from 'path';
 import { createSwaggerDocument } from '@common/swagger';
+import { Injectable, Logger } from '@nestjs/common';
 import { setupApplication } from '@src/app';
+import { Command } from 'nestjs-command';
 
 @Injectable()
 export class GenerateSwaggerCommand {

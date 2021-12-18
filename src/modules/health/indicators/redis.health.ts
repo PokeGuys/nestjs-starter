@@ -1,3 +1,8 @@
+import { getClientToken } from '@libraries/redis/common';
+import { RedisClient } from '@libraries/redis/interfaces';
+import { DEFAULT_HEALTH_CHECK_TIMEOUT } from '@modules/health/health.constants';
+import { Injectable, Scope } from '@nestjs/common';
+import { ModuleRef } from '@nestjs/core';
 import {
   ConnectionNotFoundError,
   HealthCheckError,
@@ -5,13 +10,7 @@ import {
   HealthIndicatorResult,
   TimeoutError,
 } from '@nestjs/terminus';
-import { Injectable, Scope } from '@nestjs/common';
 import { TimeoutError as PromiseTimeoutError, promiseTimeout } from '@nestjs/terminus/dist/utils';
-
-import { DEFAULT_HEALTH_CHECK_TIMEOUT } from '@modules/health/health.constants';
-import { ModuleRef } from '@nestjs/core';
-import { RedisClient } from '@libraries/redis/interfaces';
-import { getClientToken } from '@libraries/redis/common';
 
 export interface RedisPingCheckSettings {
   /**

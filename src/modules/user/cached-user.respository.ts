@@ -1,12 +1,11 @@
-import { InjectRedis, RedisClient } from '@libraries/redis';
-import { Injectable, Logger } from '@nestjs/common';
-
 import { AbstractCachedRepository } from '@common/repositories/abstract-cached.repository';
+import { InjectRedis, RedisClient } from '@libraries/redis';
 import { EntityData } from '@mikro-orm/core';
-import { EntityRepository } from '@mikro-orm/postgresql';
 import { InjectRepository } from '@mikro-orm/nestjs';
-import { USER_REPOSITORY_CACHE_KEY } from '@modules/user/user.constants';
+import { EntityRepository } from '@mikro-orm/postgresql';
 import { User } from '@modules/user/models/user.entity';
+import { USER_REPOSITORY_CACHE_KEY } from '@modules/user/user.constants';
+import { Injectable, Logger } from '@nestjs/common';
 
 @Injectable()
 export class CachedUserRepository extends AbstractCachedRepository<User> {

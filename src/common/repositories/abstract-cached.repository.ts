@@ -1,7 +1,6 @@
-import { ClassConstructor, plainToInstance } from 'class-transformer';
-
 import { IEntity } from '@common/models/entity.interface';
 import { RedisClient } from '@libraries/redis';
+import { ClassConstructor, plainToInstance } from 'class-transformer';
 import { ICachedRepository } from './interfaces';
 
 export abstract class AbstractCachedRepository<TEntity extends IEntity = IEntity>

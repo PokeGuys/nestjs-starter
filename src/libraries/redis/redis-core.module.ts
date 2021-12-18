@@ -1,3 +1,10 @@
+import { createClient, getClientToken } from '@libraries/redis/common';
+import {
+  RedisModuleAsyncOptions,
+  RedisModuleOptions,
+  RedisOptionsFactory,
+} from '@libraries/redis/interfaces';
+import { REDIS_MODULE_OPTIONS } from '@libraries/redis/redis.constants';
 import {
   DynamicModule,
   Global,
@@ -7,15 +14,8 @@ import {
   Provider,
   Type,
 } from '@nestjs/common';
-import {
-  RedisModuleAsyncOptions,
-  RedisModuleOptions,
-  RedisOptionsFactory,
-} from '@libraries/redis/interfaces';
-import { createClient, getClientToken } from '@libraries/redis/common';
 
 import { ModuleRef } from '@nestjs/core';
-import { REDIS_MODULE_OPTIONS } from '@libraries/redis/redis.constants';
 import { Redis } from 'ioredis';
 
 @Global()

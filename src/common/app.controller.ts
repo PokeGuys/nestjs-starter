@@ -1,9 +1,8 @@
-import { ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
-import { Controller, Get } from '@nestjs/common';
-
-import { BaseConfig } from '@config/interfaces';
-import { ConfigService } from '@nestjs/config';
 import { GetAppVersionApiResponse } from '@common/dto/responses';
+import { BaseConfig } from '@config/interfaces';
+import { Controller, Get } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
+import { ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
 
 @Controller()
 @ApiTags('Application')

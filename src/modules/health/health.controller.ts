@@ -1,9 +1,9 @@
-import { ApiOperation, ApiTags } from '@nestjs/swagger';
-import { Controller, Get } from '@nestjs/common';
 import {
   HEALTH_CHECK_OPERATION_DESCRIPTION,
   HEALTH_CHECK_OPERATION_SUMMARY,
 } from '@common/constants/swagger.constants';
+import { Controller, Get } from '@nestjs/common';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import {
   HealthCheck,
   HealthCheckResult,

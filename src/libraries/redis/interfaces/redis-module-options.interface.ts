@@ -1,5 +1,5 @@
-import { Cluster, ClusterOptions, NodeConfiguration, Redis, RedisOptions } from 'ioredis';
 import { ModuleMetadata, Type } from '@nestjs/common';
+import { Cluster, ClusterOptions, NodeConfiguration, Redis, RedisOptions } from 'ioredis';
 
 export type RedisClient = Redis | Cluster;
 

@@ -1,9 +1,9 @@
+import { BaseUser } from '@common/dto/base-user';
+import { UserStatus } from '@common/enum/user-status.enum';
+import { AbstractEntity } from '@common/models/abstract.entity';
 import { Entity, Property } from '@mikro-orm/core';
 
-import { AbstractEntity } from '@common/models/abstract.entity';
-import { BaseUser } from '@common/dto/base-user';
 import { UserDto } from '@modules/user/dto/responses/user.dto';
-import { UserStatus } from '@common/enum/user-status.enum';
 import { UserType } from '@modules/user/interfaces';
 import { string } from 'yargs';
 

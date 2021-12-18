@@ -1,13 +1,12 @@
 import * as fs from 'fs';
 import * as path from 'path';
-
-import { AppEnvironment, Language } from '@common/enum';
 import { DEFAULT_VERSION, UNKNOWN, URI_VERSIONING_PREFIX } from '@common/constants/app.constants';
+import { APP_CONFIG_NAMESPACE } from '@common/constants/config.constants';
+import { VersionInfo } from '@common/dto/version-info';
+import { AppEnvironment, Language } from '@common/enum';
+import { AppConfig } from '@config/interfaces';
 import { Logger, VersioningType } from '@nestjs/common';
 
-import { APP_CONFIG_NAMESPACE } from '@common/constants/config.constants';
-import { AppConfig } from '@config/interfaces';
-import { VersionInfo } from '@common/dto/version-info';
 import { registerAs } from '@nestjs/config';
 
 const getVersion = (): VersionInfo | undefined => {

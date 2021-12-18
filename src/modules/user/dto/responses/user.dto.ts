@@ -4,10 +4,10 @@ import {
 } from '@common/constants/swagger.constants';
 
 import { AbstractDto } from '@common/dto/abstract.dto';
-import { ApiProperty } from '@nestjs/swagger';
-import { User } from '@modules/user/models/user.entity';
 import { UserStatus } from '@common/enum/user-status.enum';
+import { User } from '@modules/user/models/user.entity';
 import { mockedUser } from '@modules/user/user.mock';
+import { ApiProperty } from '@nestjs/swagger';
 
 export class UserDto extends AbstractDto {
   @ApiProperty({

@@ -1,5 +1,5 @@
 {
   "package.json": ["sort-package-json", "prettier --write"],
   "*.{json,md,yaml,yml}": ["prettier --write"],
-  "*.{ts,tsx}": ["import-sort --write", "npm run format", "npm run lint"]
+  "*.{ts,tsx}": ["npm run format", "npm run lint"]
 }

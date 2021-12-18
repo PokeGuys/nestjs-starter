@@ -1,15 +1,14 @@
+import { MikroORM } from '@mikro-orm/core';
+import { UseRequestContext } from '@mikro-orm/nestjs';
+import { DEFAULT_HEALTH_CHECK_TIMEOUT } from '@modules/health/health.constants';
+import { Injectable, Scope } from '@nestjs/common';
 import {
   HealthCheckError,
   HealthIndicator,
   HealthIndicatorResult,
   TimeoutError,
 } from '@nestjs/terminus';
-import { Injectable, Scope } from '@nestjs/common';
 import { TimeoutError as PromiseTimeoutError, promiseTimeout } from '@nestjs/terminus/dist/utils';
-
-import { DEFAULT_HEALTH_CHECK_TIMEOUT } from '@modules/health/health.constants';
-import { MikroORM } from '@mikro-orm/core';
-import { UseRequestContext } from '@mikro-orm/nestjs';
 
 export interface MikroOrmPingCheckSettings {
   /**

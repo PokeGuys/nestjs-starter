@@ -1,9 +1,9 @@
+import { DECIMAL_RADIX_BASE } from '@common/constants/common.constants';
 import {
   DATABASE_CONFIG_NAMESPACE,
   DEFAULT_POSTGRESQL_PORT,
 } from '@common/constants/config.constants';
 
-import { DECIMAL_RADIX_BASE } from '@common/constants/common.constants';
 import { DatabaseConfig } from '@config/interfaces';
 import { registerAs } from '@nestjs/config';
 

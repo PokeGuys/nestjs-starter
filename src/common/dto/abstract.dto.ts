@@ -1,5 +1,5 @@
-import { ApiProperty } from '@nestjs/swagger';
 import { IEntity } from '@common/models/entity.interface';
+import { ApiProperty } from '@nestjs/swagger';
 import { getUnixTime } from 'date-fns';
 
 export class AbstractDto {

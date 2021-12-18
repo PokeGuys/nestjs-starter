@@ -1,8 +1,8 @@
-import { CachedUserRepository } from '@modules/user/cached-user.respository';
 import { EntityNotFoundException } from '@common/exceptions';
-import { Injectable } from '@nestjs/common';
+import { CachedUserRepository } from '@modules/user/cached-user.respository';
 import { RegisterDto } from '@modules/user/dto/register.dto';
 import { User } from '@modules/user/models/user.entity';
+import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class UserService {

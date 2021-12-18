@@ -85,8 +85,6 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-promise": "5.2.0",
     "husky": "7.0.4",
-    "import-sort-cli": "6.0.0",
-    "import-sort-parser-typescript": "6.0.0",
     "is-ci": "3.0.1",
     "jest": "27.4.4",
     "lint-staged": "12.1.2",
