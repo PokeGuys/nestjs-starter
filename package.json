@@ -47,7 +47,7 @@
     "date-fns": "^2.27.0",
     "fastify": "3.24.1",
     "fastify-swagger": "4.12.6",
-    "firebase-admin": "10.0.0",
+    "firebase-admin": "10.0.1",
     "ioredis": "4.28.2",
     "ioredis-mock": "5.8.1",
     "mongoose": "6.1.2",
