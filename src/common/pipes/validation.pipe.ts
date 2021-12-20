@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ValidationException } from '@common/exceptions';
 import { ArgumentMetadata, Injectable, PipeTransform, Type } from '@nestjs/common';
 import { classToPlain, plainToClass } from 'class-transformer';

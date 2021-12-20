@@ -15,7 +15,6 @@ import {
   NotFoundException,
   UnauthorizedException,
 } from '@nestjs/common';
-
 import { FastifyReply } from 'fastify';
 import { I18nService } from 'nestjs-i18n';
 

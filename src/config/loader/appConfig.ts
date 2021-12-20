@@ -6,7 +6,6 @@ import { VersionInfo } from '@common/dto/version-info';
 import { AppEnvironment, Language } from '@common/enum';
 import { AppConfig } from '@config/interfaces';
 import { Logger, VersioningType } from '@nestjs/common';
-
 import { registerAs } from '@nestjs/config';
 
 const getVersion = (): VersionInfo | undefined => {

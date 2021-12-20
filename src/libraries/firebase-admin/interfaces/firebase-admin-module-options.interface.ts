@@ -1,5 +1,4 @@
 import { ModuleMetadata, Type } from '@nestjs/common';
-
 import { AppOptions } from 'firebase-admin';
 
 export type FirebaseAdminModuleOptions = {

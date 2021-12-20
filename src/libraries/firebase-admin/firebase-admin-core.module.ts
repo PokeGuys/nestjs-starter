@@ -1,5 +1,4 @@
 import { createClient, getClientToken } from '@libraries/firebase-admin/common';
-
 import { FIREBASE_ADMIN_MODULE_OPTIONS } from '@libraries/firebase-admin/firebase-admin.constants';
 import {
   FirebaseAdminModuleAsyncOptions,

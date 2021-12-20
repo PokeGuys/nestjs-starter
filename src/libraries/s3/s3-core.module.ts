@@ -1,6 +1,5 @@
 import { createClient, getClientToken } from '@libraries/s3/common';
 import { S3ModuleAsyncOptions, S3ModuleOptions, S3OptionsFactory } from '@libraries/s3/interfaces';
-
 import { S3_MODULE_OPTIONS } from '@libraries/s3/s3.constants';
 import { DynamicModule, Global, Module, Provider, Type } from '@nestjs/common';
 

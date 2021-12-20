@@ -3,7 +3,6 @@ import {
   DATABASE_CONFIG_NAMESPACE,
   DEFAULT_POSTGRESQL_PORT,
 } from '@common/constants/config.constants';
-
 import { DatabaseConfig } from '@config/interfaces';
 import { registerAs } from '@nestjs/config';
 

@@ -1,5 +1,4 @@
 import { S3ModuleAsyncOptions, S3ModuleOptions } from '@libraries/s3/interfaces';
-
 import { S3CoreModule } from '@libraries/s3/s3-core.module';
 import { DynamicModule, Module } from '@nestjs/common';
 
