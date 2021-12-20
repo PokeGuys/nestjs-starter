@@ -57,7 +57,7 @@ services:
 
   # Redis Cluster (localhost)
   redis-cluster-localhost-access:
-    image: grokzen/redis-cluster:5.0.12
+    image: grokzen/redis-cluster:6.2.1
     environment:
       IP: '0.0.0.0'
       INITIAL_PORT: 7000
@@ -68,7 +68,7 @@ services:
       - '${REDIS_CLUSTER_PORT_RANGE:-7000-7005}:7000-7005'
 
   redis-cluster:
-    image: grokzen/redis-cluster:5.0.12
+    image: grokzen/redis-cluster:6.2.1
     environment:
       INITIAL_PORT: 7000
       MASTERS: 3
