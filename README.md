@@ -58,8 +58,8 @@ Fastify based NestJS Starter kit
     - [x] prettier
     - [x] import-sort
   - [x] Prettier
-  - [ ] ESLint
-    - [ ] eslint-plugin-promise (eslint 8 support)
+  - [x] ESLint
+    - [x] eslint-plugin-promise
     - [x] eslint-plugin-jest
     - [x] eslint-plugin-airbnb
     - [x] eslint-plugin-prettier
