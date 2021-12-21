@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "labels": ["renovate"],
+  "labels": ["renovate", "dependencies"],
   "extends": [
     "config:base",
     "group:definitelyTyped",
