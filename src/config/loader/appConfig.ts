@@ -45,5 +45,10 @@ export const appConfig = registerAs(APP_CONFIG_NAMESPACE, (): AppConfig => {
       methods: ['OPTIONS', 'HEAD', 'GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
       allowedHeaders: ['Content-Type', 'Accept', 'Authorization'],
     },
+    logger: {
+      enabled: process.env.LOGGER_ENABLED !== 'false',
+      level: process.env.LOGGER_LEVEL || 'info',
+      redact: ['password', 'headers.cookie', 'headers.authorization'],
+    },
   };
 });

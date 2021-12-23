@@ -2,10 +2,36 @@ import { AppController } from '@common/app.controller';
 import { BootstrapModule } from '@common/bootstrap.module';
 import { HealthModule } from '@modules/health';
 import { UserModule } from '@modules/user';
-import { Module } from '@nestjs/common';
+import {
+  MiddlewareConsumer,
+  Module,
+  NestModule,
+  RequestMethod,
+  ValidationPipe,
+} from '@nestjs/common';
+import { APP_PIPE, APP_FILTER } from '@nestjs/core';
+import { AllExceptionFilter } from './filters/all-exception.filter';
+import { RequestIdMiddleware } from './middleware';
 
 @Module({
   imports: [BootstrapModule, HealthModule, UserModule],
   controllers: [AppController],
+  providers: [
+    {
+      provide: APP_PIPE,
+      useClass: ValidationPipe,
+    },
+    {
+      provide: APP_FILTER,
+      useClass: AllExceptionFilter,
+    },
+  ],
 })
-export class AppModule {}
+export class AppModule implements NestModule {
+  public configure(consumer: MiddlewareConsumer): void {
+    consumer.apply(RequestIdMiddleware).forRoutes({
+      path: '(.*)',
+      method: RequestMethod.ALL,
+    });
+  }
+}
