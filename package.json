@@ -61,7 +61,6 @@
     "nestjs-pino": "2.4.0",
     "pino": "7.6.0",
     "pino-http": "6.5.0",
-    "pino-pretty": "7.3.0",
     "redis-commands": "1.7.0",
     "redlock": "4.2.0",
     "reflect-metadata": "0.1.13",

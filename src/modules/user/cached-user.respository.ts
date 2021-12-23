@@ -1,4 +1,4 @@
-import { AbstractCachedRepository } from '@common/repositories/abstract-cached.repository';
+import { AbstractCachedRepository } from '@common/repositories';
 import { InjectRedis, RedisClient } from '@libraries/redis';
 import { EntityData } from '@mikro-orm/core';
 import { InjectRepository } from '@mikro-orm/nestjs';

@@ -1,7 +1,6 @@
+import { UserModule } from '@modules/user';
 import { AppController } from '@common/app.controller';
 import { BootstrapModule } from '@common/bootstrap.module';
-import { HealthModule } from '@modules/health';
-import { UserModule } from '@modules/user';
 import {
   MiddlewareConsumer,
   Module,
@@ -9,9 +8,10 @@ import {
   RequestMethod,
   ValidationPipe,
 } from '@nestjs/common';
+import { HealthModule } from '@modules/health';
 import { APP_PIPE, APP_FILTER } from '@nestjs/core';
-import { AllExceptionFilter } from './filters/all-exception.filter';
 import { RequestIdMiddleware } from './middleware';
+import { AllExceptionFilter } from './filters/all-exception.filter';
 
 @Module({
   imports: [BootstrapModule, HealthModule, UserModule],

@@ -1,37 +1,35 @@
-import * as path from 'path';
+import path from 'path';
 import {
+  MONGODB_CONFIG_NAMESPACE,
   APP_CONFIG_NAMESPACE,
   DATABASE_CONFIG_NAMESPACE,
-  MONGODB_CONFIG_NAMESPACE,
   REDIS_CONFIG_NAMESPACE,
 } from '@common/constants/config.constants';
-import { AppEnvironment, Language } from '@common/enum';
+import { MikroOrmModule } from '@mikro-orm/nestjs';
 import { validate } from '@config/env.validator';
 import { BaseConfig } from '@config/interfaces';
-import { appConfig, databaseConfig, httpConfig, mongodbConfig, redisConfig } from '@config/loader';
-import { RedisModule } from '@libraries/redis';
-import { MikroOrmModule } from '@mikro-orm/nestjs';
-import { Module, RequestMethod, ValidationPipe } from '@nestjs/common';
+import { appConfig, databaseConfig, httpConfig, redisConfig, mongodbConfig } from '@config/loader';
+import { Module, RequestMethod } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { MongooseModule } from '@nestjs/mongoose';
-import {
-  AcceptLanguageResolver,
-  CookieResolver,
-  HeaderResolver,
-  I18nJsonParser,
-  I18nModule,
-  QueryResolver,
-} from 'nestjs-i18n';
-import { APP_PIPE, APP_FILTER } from '@nestjs/core';
 import { LoggerModule } from 'nestjs-pino';
-import { stdSerializers } from 'pino';
 import {
   requestIdGenerator,
   customLogLevelFormatter,
   requestSerializer,
   responseSerializer,
 } from '@common/util/logger.util';
-import { AllExceptionFilter } from '@common/filters/all-exception.filter';
+import {
+  I18nModule,
+  I18nJsonParser,
+  QueryResolver,
+  HeaderResolver,
+  AcceptLanguageResolver,
+  CookieResolver,
+} from 'nestjs-i18n';
+import { MongooseModule } from '@nestjs/mongoose';
+import { stdSerializers } from 'pino';
+import { Language } from './enum';
+import { RedisModule } from '../libraries/redis';
 
 @Module({
   imports: [
@@ -39,7 +37,7 @@ import { AllExceptionFilter } from '@common/filters/all-exception.filter';
       validate,
       isGlobal: true,
       cache: true,
-      load: [appConfig, httpConfig, mongodbConfig, redisConfig, databaseConfig],
+      load: [appConfig, httpConfig, databaseConfig, mongodbConfig, redisConfig],
       validationOptions: {
         allowUnknown: true,
         abortEarly: true,
@@ -49,10 +47,8 @@ import { AllExceptionFilter } from '@common/filters/all-exception.filter';
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (cfg: ConfigService<BaseConfig, true>) => {
-        const mongodb = cfg.get(MONGODB_CONFIG_NAMESPACE, { infer: true });
-        return {
-          uri: mongodb.uri,
-        };
+        const { uri } = cfg.get(MONGODB_CONFIG_NAMESPACE, { infer: true });
+        return { uri };
       },
     }),
     MikroOrmModule.forRootAsync({
@@ -95,7 +91,9 @@ import { AllExceptionFilter } from '@common/filters/all-exception.filter';
       inject: [ConfigService],
       useFactory: (configService: ConfigService<BaseConfig, true>) => {
         const appCfg = configService.get(APP_CONFIG_NAMESPACE, { infer: true });
-        const redisCfg = configService.get(REDIS_CONFIG_NAMESPACE, { infer: true });
+        const redisCfg = configService.get(REDIS_CONFIG_NAMESPACE, {
+          infer: true,
+        });
         if (redisCfg.cluster) {
           return {
             cluster: {
@@ -118,17 +116,15 @@ import { AllExceptionFilter } from '@common/filters/all-exception.filter';
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (config: ConfigService<BaseConfig, true>) => {
-        const appEnv = config.get('app.env', { infer: true });
-        const isDeployment = [AppEnvironment.Development, AppEnvironment.Production].includes(
-          appEnv,
-        );
-        const { enabled, level, redact } = config.get('app.logger', { infer: true });
+        const { enabled, level, redact } = config.get('app.logger', {
+          infer: true,
+        });
         return {
           pinoHttp: {
             enabled,
             level,
             redact,
-            prettyPrint: !isDeployment,
+            autoLogging: true,
             genReqId: requestIdGenerator,
             customLogLevel: customLogLevelFormatter,
             serializers: {
@@ -141,16 +137,6 @@ import { AllExceptionFilter } from '@common/filters/all-exception.filter';
         };
       },
     }),
-  ],
-  providers: [
-    {
-      provide: APP_PIPE,
-      useClass: ValidationPipe,
-    },
-    {
-      provide: APP_FILTER,
-      useClass: AllExceptionFilter,
-    },
   ],
 })
 export class BootstrapModule {}
