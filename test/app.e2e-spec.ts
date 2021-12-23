@@ -1,17 +1,16 @@
+import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify';
 import { AppModule } from '@common/app.module';
-import { INestApplication } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
-import * as request from 'supertest';
 
 describe('AppController (e2e)', () => {
-  let app: INestApplication;
+  let app: NestFastifyApplication;
 
   beforeEach(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
     }).compile();
 
-    app = moduleFixture.createNestApplication();
+    app = moduleFixture.createNestApplication<NestFastifyApplication>(new FastifyAdapter());
     await app.init();
   });
 
@@ -19,23 +18,37 @@ describe('AppController (e2e)', () => {
     await app.close();
   });
 
-  it('/health (GET)', () => {
-    return request(app.getHttpServer())
-      .get('/health')
-      .expect(200)
-      .expect({
-        status: 'ok',
-        info: {
-          database: {
-            status: 'up',
-          },
+  it('/health (GET)', async () => {
+    const res = await app.inject({
+      method: 'GET',
+      url: '/health',
+    });
+    expect(res.statusCode).toBe(200);
+    expect(res.json()).toStrictEqual({
+      status: 'ok',
+      info: {
+        database: {
+          status: 'up',
         },
-        error: {},
-        details: {
-          database: {
-            status: 'up',
-          },
+        mongodb: {
+          status: 'up',
         },
-      });
+        redis: {
+          status: 'up',
+        },
+      },
+      error: {},
+      details: {
+        database: {
+          status: 'up',
+        },
+        mongodb: {
+          status: 'up',
+        },
+        redis: {
+          status: 'up',
+        },
+      },
+    });
   });
 });
