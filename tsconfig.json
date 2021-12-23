@@ -12,8 +12,10 @@
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true,
+    "noEmit": false,
+    "incremental": false,
     "skipLibCheck": true,
+    "esModuleInterop": true,
 
     /* Strict Type-Checking Options */
     "strict": true /* Enable all strict type-checking options. */,

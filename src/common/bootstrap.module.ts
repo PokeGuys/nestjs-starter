@@ -1,15 +1,18 @@
 import * as path from 'path';
-import { Language } from '@common/enum';
-import { AllExceptionFilter } from '@common/filters/all-exception.filter';
-import { ValidationPipe } from '@common/pipes/validation.pipe';
+import {
+  APP_CONFIG_NAMESPACE,
+  DATABASE_CONFIG_NAMESPACE,
+  MONGODB_CONFIG_NAMESPACE,
+  REDIS_CONFIG_NAMESPACE,
+} from '@common/constants/config.constants';
+import { AppEnvironment, Language } from '@common/enum';
 import { validate } from '@config/env.validator';
 import { BaseConfig } from '@config/interfaces';
 import { appConfig, databaseConfig, httpConfig, mongodbConfig, redisConfig } from '@config/loader';
 import { RedisModule } from '@libraries/redis';
 import { MikroOrmModule } from '@mikro-orm/nestjs';
-import { Module } from '@nestjs/common';
+import { Module, RequestMethod, ValidationPipe } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { APP_FILTER, APP_PIPE } from '@nestjs/core';
 import { MongooseModule } from '@nestjs/mongoose';
 import {
   AcceptLanguageResolver,
@@ -19,12 +22,16 @@ import {
   I18nModule,
   QueryResolver,
 } from 'nestjs-i18n';
+import { APP_PIPE, APP_FILTER } from '@nestjs/core';
+import { LoggerModule } from 'nestjs-pino';
+import { stdSerializers } from 'pino';
 import {
-  APP_CONFIG_NAMESPACE,
-  DATABASE_CONFIG_NAMESPACE,
-  MONGODB_CONFIG_NAMESPACE,
-  REDIS_CONFIG_NAMESPACE,
-} from './constants/config.constants';
+  requestIdGenerator,
+  customLogLevelFormatter,
+  requestSerializer,
+  responseSerializer,
+} from '@common/util/logger.util';
+import { AllExceptionFilter } from '@common/filters/all-exception.filter';
 
 @Module({
   imports: [
@@ -104,6 +111,33 @@ import {
           password: redisCfg.password,
           db: redisCfg.database,
           maxRetriesPerRequest: redisCfg.maxRetries,
+        };
+      },
+    }),
+    LoggerModule.forRootAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (config: ConfigService<BaseConfig, true>) => {
+        const appEnv = config.get('app.env', { infer: true });
+        const isDeployment = [AppEnvironment.Development, AppEnvironment.Production].includes(
+          appEnv,
+        );
+        const { enabled, level, redact } = config.get('app.logger', { infer: true });
+        return {
+          pinoHttp: {
+            enabled,
+            level,
+            redact,
+            prettyPrint: !isDeployment,
+            genReqId: requestIdGenerator,
+            customLogLevel: customLogLevelFormatter,
+            serializers: {
+              err: stdSerializers.err,
+              req: requestSerializer,
+              res: responseSerializer,
+            },
+          },
+          exclude: [{ method: RequestMethod.ALL, path: '(.*)/(readiness|liveness)' }],
         };
       },
     }),

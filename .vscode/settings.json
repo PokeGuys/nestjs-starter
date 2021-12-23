@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["Mikro", "Parens"]
+  "cSpell.words": ["Mikro", "Parens"],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

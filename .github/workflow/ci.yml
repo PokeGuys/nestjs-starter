@@ -1,0 +1,51 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+
+      - name: Setup for pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.20.3
+
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Run tests and collect coverage
+        run: pnpm run test:unit:cov
+
+      # - name: Run integration tests and collect coverage
+      #   run: pnpm run test:e2e:cov
+
+      - name: build
+        run: pnpm build
+
+  auto-merge:
+    needs: [build]
+    if: contains(github.event.pull_request.user.login, 'dependabot') || contains(github.event.pull_request.user.login, 'renovate')
+    runs-on: ubuntu-latest
+    steps:
+      - name: automerge
+        uses: 'pascalgn/automerge-action@v0.14.3'
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+          MERGE_LABELS: ''
+          MERGE_METHOD: rebase

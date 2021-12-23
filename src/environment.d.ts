@@ -1,4 +1,5 @@
 import { AppEnvironment, Language } from '@common/enum';
+import { pino } from 'pino';
 
 declare global {
   namespace NodeJS {
@@ -35,6 +36,9 @@ declare global {
       SENDGRID_API_KEY: string;
       SENDGRID_SENDER_NAME: string;
       SENDGRID_SENDER_EMAIL: string;
+
+      LOGGER_ENABLED?: 'true' | 'false';
+      LOGGER_LEVEL?: pino.LevelWithSilent;
     }
   }
 }

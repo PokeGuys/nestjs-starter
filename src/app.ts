@@ -7,7 +7,10 @@ import { NestFactory } from '@nestjs/core';
 import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify';
 
 export const setupApplication = async (): Promise<INestApplication> => {
-  const app = await NestFactory.create<NestFastifyApplication>(AppModule, new FastifyAdapter());
+  const app = await NestFactory.create<NestFastifyApplication>(AppModule, new FastifyAdapter(), {
+    bufferLogs: true,
+  });
+
   const cfg = app.get<ConfigService<BaseConfig, true>>(ConfigService);
   const { prefix, corsOptions, versioningOptions } = cfg.get(APP_CONFIG_NAMESPACE, { infer: true });
 
