@@ -76,7 +76,7 @@ services:
 
   # RabbitMQ
   rabbitmq:
-    image: 'rabbitmq:3.9.8-management'
+    image: 'rabbitmq:3.9.11-management'
     environment:
       - RABBITMQ_DEFAULT_USER=root
       - RABBITMQ_DEFAULT_PASS=example
