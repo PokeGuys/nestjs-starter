@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ develop, master ]
+    branches: [develop, master]
   pull_request:
 
 jobs:
@@ -26,17 +26,23 @@ jobs:
           node-version: 16.x
           cache: 'pnpm'
 
+      - name: Setup infrastructure for e2e testing
+        run: docker-compose -f docker-compose.infra.yml up -d
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Setup environment variable file for testing
+        run: cp .env.ci .env
+
       - name: Lint
-        run: pnpm run lint
+        run: pnpm run lint:check
+
+      - name: Run integration tests and collect coverage
+        run: pnpm run test:e2e:cov
 
       - name: Run tests and collect coverage
         run: pnpm run test:unit:cov
-
-      # - name: Run integration tests and collect coverage
-      #   run: pnpm run test:e2e:cov
 
       - name: build
         run: pnpm build
