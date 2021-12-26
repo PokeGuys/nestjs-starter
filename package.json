@@ -19,6 +19,7 @@
     "coverage:merge": "pnpm run test:unit:cov && pnpm run test:e2e:cov && nyc merge .nyc_output coverage.json",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "lint:check": "eslint \"{src,apps,libs,test}/**/*.ts\"",
     "prepare": "is-ci || husky install",
     "start": "nest start",
     "start:debug": "nest start --debug --watch",
