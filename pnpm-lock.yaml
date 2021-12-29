@@ -7,7 +7,7 @@ specifiers:
   '@commitlint/config-conventional': 15.0.0
   '@mikro-orm/core': 4.5.10
   '@mikro-orm/nestjs': 4.3.1
-  '@mikro-orm/postgresql': 4.5.9
+  '@mikro-orm/postgresql': 4.5.10
   '@nestjs/cli': 8.1.6
   '@nestjs/common': 8.2.4
   '@nestjs/config': 1.1.5
@@ -73,9 +73,9 @@ specifiers:
 
 dependencies:
   '@aws-sdk/client-s3': 3.45.0
-  '@mikro-orm/core': 4.5.10_@mikro-orm+postgresql@4.5.9
+  '@mikro-orm/core': 4.5.10_@mikro-orm+postgresql@4.5.10
   '@mikro-orm/nestjs': 4.3.1_e5a1a1e7443d818b5348de237121895c
-  '@mikro-orm/postgresql': 4.5.9_@mikro-orm+core@4.5.10
+  '@mikro-orm/postgresql': 4.5.10_@mikro-orm+core@4.5.10
   '@nestjs/common': 8.2.4_7b1fc936b9361df55228aaa721957d0e
   '@nestjs/config': 1.1.5_20ad946084432ae747ef29916ef515cb
   '@nestjs/core': 8.2.4_20ad946084432ae747ef29916ef515cb
@@ -1956,7 +1956,7 @@ packages:
       chalk: 4.1.2
     dev: true
 
-  /@mikro-orm/core/4.5.10_@mikro-orm+postgresql@4.5.9:
+  /@mikro-orm/core/4.5.10_@mikro-orm+postgresql@4.5.10:
     resolution: {integrity: sha512-vnSSFGSR/JoGINJlci5fafGSqvLgHx+3Nt3XjnCTNLOjQ0WL7LsdUVwM9FE/W5FipcJRaQfWmY/iLXBqnaarGQ==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -1983,7 +1983,7 @@ packages:
       '@mikro-orm/sqlite':
         optional: true
     dependencies:
-      '@mikro-orm/postgresql': 4.5.9_@mikro-orm+core@4.5.10
+      '@mikro-orm/postgresql': 4.5.10_@mikro-orm+core@4.5.10
       ansi-colors: 4.1.1
       clone: 2.1.2
       dotenv: 8.2.0
@@ -1994,8 +1994,8 @@ packages:
       strip-json-comments: 3.1.1
     dev: false
 
-  /@mikro-orm/knex/4.5.9_@mikro-orm+core@4.5.10+pg@8.6.0:
-    resolution: {integrity: sha512-6dVwTKV3LMsEWDdYu5AlBSS4/0BaqEXTgAu4Ryyl95r7G+Y717RXI3fE9snRNE3uJU44Pi0O3TuhFYhdCb9arw==}
+  /@mikro-orm/knex/4.5.10_@mikro-orm+core@4.5.10+pg@8.6.0:
+    resolution: {integrity: sha512-iYSsAlHVNC7m+yz7dDA3JwjBHxyNuGNwQijUpJ6n2Vt55PyorcW4I3wTnHHALUS30Fvjm4TnfZRdio+aQhynsA==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
       '@mikro-orm/core': ^4.0.0
@@ -2022,7 +2022,7 @@ packages:
       sqlite3:
         optional: true
     dependencies:
-      '@mikro-orm/core': 4.5.10_@mikro-orm+postgresql@4.5.9
+      '@mikro-orm/core': 4.5.10_@mikro-orm+postgresql@4.5.10
       fs-extra: 9.1.0
       knex: 0.21.19_pg@8.6.0
       pg: 8.6.0
@@ -2039,19 +2039,19 @@ packages:
       '@nestjs/common': ^7.0.0||^8.0.0
       '@nestjs/core': ^7.0.0||^8.0.0
     dependencies:
-      '@mikro-orm/core': 4.5.10_@mikro-orm+postgresql@4.5.9
+      '@mikro-orm/core': 4.5.10_@mikro-orm+postgresql@4.5.10
       '@nestjs/common': 8.2.4_7b1fc936b9361df55228aaa721957d0e
       '@nestjs/core': 8.2.4_20ad946084432ae747ef29916ef515cb
     dev: false
 
-  /@mikro-orm/postgresql/4.5.9_@mikro-orm+core@4.5.10:
-    resolution: {integrity: sha512-hIXJlPTmf1NUqK8kqeo33qdaXeVlQQOQI03wm8Mfv+mQ0efNZ6VtQnx27tSi5rIJHhVXEzq4ap0CUMxgj/5EQA==}
+  /@mikro-orm/postgresql/4.5.10_@mikro-orm+core@4.5.10:
+    resolution: {integrity: sha512-hVTW5rO43T3k4AN3e1tu2rUZIAN0VuBrizdf+sGYpKZ7xtLAOFXY10TCmLdv/B6euAwrXRSsCraOOT7JnOQyBg==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
       '@mikro-orm/core': ^4.0.0
     dependencies:
-      '@mikro-orm/core': 4.5.10_@mikro-orm+postgresql@4.5.9
-      '@mikro-orm/knex': 4.5.9_@mikro-orm+core@4.5.10+pg@8.6.0
+      '@mikro-orm/core': 4.5.10_@mikro-orm+postgresql@4.5.10
+      '@mikro-orm/knex': 4.5.10_@mikro-orm+core@4.5.10+pg@8.6.0
       pg: 8.6.0
     transitivePeerDependencies:
       - '@mikro-orm/entity-generator'
