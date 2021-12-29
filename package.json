@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-s3": "3.45.0",
-    "@mikro-orm/core": "4.5.9",
+    "@mikro-orm/core": "4.5.10",
     "@mikro-orm/nestjs": "4.3.1",
     "@mikro-orm/postgresql": "4.5.9",
     "@nestjs/common": "8.2.4",
