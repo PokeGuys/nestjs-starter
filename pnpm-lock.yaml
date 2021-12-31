@@ -53,7 +53,7 @@ specifiers:
   nestjs-i18n: 8.2.2
   nestjs-pino: 2.4.0
   nyc: 15.1.0
-  pino: 7.6.1
+  pino: 7.6.2
   pino-http: 6.5.0
   prettier: 2.5.1
   redis-commands: 1.7.0
@@ -96,7 +96,7 @@ dependencies:
   nestjs-command: 3.1.0_661ff8f3abe9f16fb90e9c5dbb9f7fe7
   nestjs-i18n: 8.2.2_0b70cc3713e84b865a042a0b4f438ec5
   nestjs-pino: 2.4.0_pino-http@6.5.0
-  pino: 7.6.1
+  pino: 7.6.2
   pino-http: 6.5.0
   redis-commands: 1.7.0
   redlock: 4.2.0
@@ -7973,7 +7973,7 @@ packages:
     dependencies:
       fast-url-parser: 1.1.3
       get-caller-file: 2.0.5
-      pino: 7.6.1
+      pino: 7.6.2
       pino-std-serializers: 5.0.0
     dev: false
 
@@ -8002,15 +8002,15 @@ packages:
       sonic-boom: 1.4.1
     dev: false
 
-  /pino/7.6.1:
-    resolution: {integrity: sha512-elKmRwO2h3kamfFZmlBNgoZ8WKhKxbPuYOGXKEsPbIXqHnBU1M1haswvsUP9/iJ56Jo7vkqTu1RiU/r5Xtl8YA==}
+  /pino/7.6.2:
+    resolution: {integrity: sha512-GTzW+HHOzUTaPIyvK6tasky2jMXF1o3iw7Oc2ik7qFjcaexXfyn6ej72XwX4O+wuRyFCbp3oKpv00htrPddv5A==}
     hasBin: true
     dependencies:
       fast-redact: 3.0.2
-      fastify-warning: 0.2.0
       on-exit-leak-free: 0.2.0
       pino-abstract-transport: 0.5.0
       pino-std-serializers: 4.0.0
+      process-warning: 1.0.0
       quick-format-unescaped: 4.0.4
       real-require: 0.1.0
       safe-stable-stringify: 2.3.1
@@ -8108,6 +8108,10 @@ packages:
     dependencies:
       fromentries: 1.3.2
     dev: true
+
+  /process-warning/1.0.0:
+    resolution: {integrity: sha512-du4wfLyj4yCZq1VupnVSZmRsPJsNuxoDQFdCFHLaYiEbFBD7QE0a+I4D7hOxrVnh78QE/YipFAj9lXHiXocV+Q==}
+    dev: false
 
   /progress/2.0.3:
     resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==}
