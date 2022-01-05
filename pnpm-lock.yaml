@@ -49,7 +49,7 @@ specifiers:
   lint-staged: 12.1.5
   lodash.pick: 4.4.0
   mongoose: 6.1.4
-  nestjs-command: 3.1.0
+  nestjs-command: 3.1.1
   nestjs-i18n: 8.2.2
   nestjs-pino: 2.4.0
   nyc: 15.1.0
@@ -93,7 +93,7 @@ dependencies:
   ioredis-mock: 5.8.1_e75c1a450aabdb99acd53e25108a8857
   lodash.pick: 4.4.0
   mongoose: 6.1.4
-  nestjs-command: 3.1.0_661ff8f3abe9f16fb90e9c5dbb9f7fe7
+  nestjs-command: 3.1.1_661ff8f3abe9f16fb90e9c5dbb9f7fe7
   nestjs-i18n: 8.2.2_0b70cc3713e84b865a042a0b4f438ec5
   nestjs-pino: 2.4.0_pino-http@6.5.0
   pino: 7.6.2
@@ -7410,8 +7410,8 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /nestjs-command/3.1.0_661ff8f3abe9f16fb90e9c5dbb9f7fe7:
-    resolution: {integrity: sha512-CdA4iJ53J2IJiL8suMm1QQrsTJvgcPVdzFs8ZK4gQG3k+o3fsRhflsxDz7ao1CW2mR00h6ro3pXPdL4YcSRUog==}
+  /nestjs-command/3.1.1_661ff8f3abe9f16fb90e9c5dbb9f7fe7:
+    resolution: {integrity: sha512-jis8nS0QNZkw35BzBlkkOqty4BJcomUZdmIyne+HjSdk0CwIy6PzXkhGiUIPySBwoK/6d4OxjFQckVoNB/H0TA==}
     hasBin: true
     peerDependencies:
       '@nestjs/common': ^6.0.0 || ^7.0.0 || ^8.0.0
