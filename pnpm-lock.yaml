@@ -10,7 +10,7 @@ specifiers:
   '@mikro-orm/postgresql': 4.5.10
   '@nestjs/cli': 8.1.6
   '@nestjs/common': 8.2.4
-  '@nestjs/config': 1.1.5
+  '@nestjs/config': 1.1.6
   '@nestjs/core': 8.2.4
   '@nestjs/mongoose': 9.0.2
   '@nestjs/platform-fastify': 8.2.4
@@ -77,7 +77,7 @@ dependencies:
   '@mikro-orm/nestjs': 4.3.1_e5a1a1e7443d818b5348de237121895c
   '@mikro-orm/postgresql': 4.5.10_@mikro-orm+core@4.5.10
   '@nestjs/common': 8.2.4_ab122ef2881ad3103a0a4ece3a4e1880
-  '@nestjs/config': 1.1.5_947eef0805e788651766a5ee39d6841e
+  '@nestjs/config': 1.1.6_947eef0805e788651766a5ee39d6841e
   '@nestjs/core': 8.2.4_947eef0805e788651766a5ee39d6841e
   '@nestjs/mongoose': 9.0.2_5dc382d9890616d7d0323c05ae474c71
   '@nestjs/platform-fastify': 8.2.4_4074b1ae164556f5db19ac4b8b5667b7
@@ -2132,8 +2132,8 @@ packages:
       - debug
     dev: false
 
-  /@nestjs/config/1.1.5_947eef0805e788651766a5ee39d6841e:
-    resolution: {integrity: sha512-xSpp/6TIHFhicuuwRu2fFGmClzN+YXtpVSLGX3LT9iAwtNDcccX3qVDOX1BLdFdBbqZTqT3KezsT+iE/czd/xg==}
+  /@nestjs/config/1.1.6_947eef0805e788651766a5ee39d6841e:
+    resolution: {integrity: sha512-HYizKt6Dr6gcZl8FmZbTfQxP0MG8oXMh+gVFT0XCwYDAq26BOKyhPsIxrKsryicVeKViRgetCUhlJY9EqaekZA==}
     peerDependencies:
       '@nestjs/common': ^7.0.0 || ^8.0.0
       reflect-metadata: ^0.1.13
@@ -2142,9 +2142,7 @@ packages:
       '@nestjs/common': 8.2.4_ab122ef2881ad3103a0a4ece3a4e1880
       dotenv: 10.0.0
       dotenv-expand: 5.1.0
-      lodash.get: 4.4.2
-      lodash.has: 4.5.2
-      lodash.set: 4.3.2
+      lodash: 4.17.21
       reflect-metadata: 0.1.13
       rxjs: 7.5.1
       uuid: 8.3.2
@@ -7080,14 +7078,6 @@ packages:
   /lodash.flattendeep/4.4.0:
     resolution: {integrity: sha1-+wMJF/hqMTTlvJvsDWngAT3f7bI=}
 
-  /lodash.get/4.4.2:
-    resolution: {integrity: sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=}
-    dev: false
-
-  /lodash.has/4.5.2:
-    resolution: {integrity: sha1-0Z9NwQlQWMzL4rDN9O4P5Ko3yGI=}
-    dev: false
-
   /lodash.includes/4.3.0:
     resolution: {integrity: sha1-YLuYqHy5I8aMoeUTJUgzFISfVT8=}
     dev: false
@@ -7130,10 +7120,6 @@ packages:
 
   /lodash.pick/4.4.0:
     resolution: {integrity: sha1-UvBWEP/53tQiYRRB7R/BI6AwAbM=}
-    dev: false
-
-  /lodash.set/4.3.2:
-    resolution: {integrity: sha1-2HV7HagH3eJIFrDWqEvqGnYjCyM=}
     dev: false
 
   /lodash/4.17.21:

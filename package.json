@@ -41,7 +41,7 @@
     "@mikro-orm/nestjs": "4.3.1",
     "@mikro-orm/postgresql": "4.5.10",
     "@nestjs/common": "8.2.4",
-    "@nestjs/config": "1.1.5",
+    "@nestjs/config": "1.1.6",
     "@nestjs/core": "8.2.4",
     "@nestjs/mongoose": "9.0.2",
     "@nestjs/platform-fastify": "8.2.4",
