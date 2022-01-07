@@ -48,7 +48,7 @@ specifiers:
   jest: 27.4.5
   lint-staged: 12.1.5
   lodash.pick: 4.4.0
-  mongoose: 6.1.4
+  mongoose: 6.1.5
   nestjs-command: 3.1.1
   nestjs-i18n: 8.2.2
   nestjs-pino: 2.4.0
@@ -79,7 +79,7 @@ dependencies:
   '@nestjs/common': 8.2.4_ab122ef2881ad3103a0a4ece3a4e1880
   '@nestjs/config': 1.1.6_947eef0805e788651766a5ee39d6841e
   '@nestjs/core': 8.2.4_947eef0805e788651766a5ee39d6841e
-  '@nestjs/mongoose': 9.0.2_5dc382d9890616d7d0323c05ae474c71
+  '@nestjs/mongoose': 9.0.2_6bb8fded099a99d1425271edda0e2572
   '@nestjs/platform-fastify': 8.2.4_4074b1ae164556f5db19ac4b8b5667b7
   '@nestjs/swagger': 5.1.5_ca3415e825a5164cdad23d4e92882d96
   '@nestjs/terminus': 8.0.3_f47b8c42bd10ebcc79dbeddc687db60f
@@ -92,7 +92,7 @@ dependencies:
   ioredis: 4.28.2
   ioredis-mock: 5.8.1_e75c1a450aabdb99acd53e25108a8857
   lodash.pick: 4.4.0
-  mongoose: 6.1.4
+  mongoose: 6.1.5
   nestjs-command: 3.1.1_661ff8f3abe9f16fb90e9c5dbb9f7fe7
   nestjs-i18n: 8.2.2_0b70cc3713e84b865a042a0b4f438ec5
   nestjs-pino: 2.4.0_pino-http@6.5.0
@@ -2192,7 +2192,7 @@ packages:
       reflect-metadata: 0.1.13
     dev: false
 
-  /@nestjs/mongoose/9.0.2_5dc382d9890616d7d0323c05ae474c71:
+  /@nestjs/mongoose/9.0.2_6bb8fded099a99d1425271edda0e2572:
     resolution: {integrity: sha512-v4Umk3hssJ1RJJIe2LBVHvrsGfY+srq2nfOVCw36PGe7+eObzSBIryMJi+h2mTZpYIohNRGM2O66clEmhctYQQ==}
     peerDependencies:
       '@nestjs/common': ^6.0.0 || ^7.0.0 || ^8.0.0
@@ -2203,7 +2203,7 @@ packages:
     dependencies:
       '@nestjs/common': 8.2.4_ab122ef2881ad3103a0a4ece3a4e1880
       '@nestjs/core': 8.2.4_947eef0805e788651766a5ee39d6841e
-      mongoose: 6.1.4
+      mongoose: 6.1.5
       reflect-metadata: 0.1.13
       rxjs: 7.5.1
     dev: false
@@ -7410,10 +7410,11 @@ packages:
       saslprep: 1.0.3
     dev: false
 
-  /mongoose/6.1.4:
-    resolution: {integrity: sha512-RsNiMpGWo7OXFmq5xt0ZWYt2rabHLxNYr0oAiR0xDv23lHKCkXDqyDl71+sXF9rcWEe8BTHG+1IRQykiNBvaKQ==}
+  /mongoose/6.1.5:
+    resolution: {integrity: sha512-0rRxTBoqMSuQF/YM3TEvbHn8Ybnd9dRjD7DItEjCXK0vwC/muLKXZ4rVCN4KAnWQAkwYzoWw2tXAy0YF6TUdEg==}
     engines: {node: '>=12.0.0'}
     dependencies:
+      '@types/node': 16.11.17
       bson: 4.6.0
       kareem: 2.3.3
       mongodb: 4.2.2
