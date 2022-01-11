@@ -39,7 +39,7 @@ specifiers:
   eslint-plugin-prettier: 4.0.0
   eslint-plugin-promise: 6.0.0
   fastify: 3.24.1
-  fastify-swagger: 4.13.0
+  fastify-swagger: 4.13.1
   firebase-admin: 10.0.1
   husky: 7.0.4
   ioredis: 4.28.2
@@ -81,13 +81,13 @@ dependencies:
   '@nestjs/core': 8.2.4_947eef0805e788651766a5ee39d6841e
   '@nestjs/mongoose': 9.0.2_6bb8fded099a99d1425271edda0e2572
   '@nestjs/platform-fastify': 8.2.4_4074b1ae164556f5db19ac4b8b5667b7
-  '@nestjs/swagger': 5.1.5_ca3415e825a5164cdad23d4e92882d96
+  '@nestjs/swagger': 5.1.5_319071c2cdda2dfdffc4586d44a5f04f
   '@nestjs/terminus': 8.0.3_f47b8c42bd10ebcc79dbeddc687db60f
   class-transformer: 0.5.1
   class-validator: 0.13.2
   date-fns: 2.28.0
   fastify: 3.24.1
-  fastify-swagger: 4.13.0
+  fastify-swagger: 4.13.1
   firebase-admin: 10.0.1
   ioredis: 4.28.2
   ioredis-mock: 5.8.1_e75c1a450aabdb99acd53e25108a8857
@@ -2257,7 +2257,7 @@ packages:
       - chokidar
     dev: true
 
-  /@nestjs/swagger/5.1.5_ca3415e825a5164cdad23d4e92882d96:
+  /@nestjs/swagger/5.1.5_319071c2cdda2dfdffc4586d44a5f04f:
     resolution: {integrity: sha512-jvsgciVEFcYVVEuLdNAmgJDpFSQzIoukg+Ovz1vJ97OeCprx0sVhmocn13nCl/dEwIkwoM3eby9OiaccX0A+3A==}
     peerDependencies:
       '@nestjs/common': ^8.0.0
@@ -2274,7 +2274,7 @@ packages:
       '@nestjs/common': 8.2.4_ab122ef2881ad3103a0a4ece3a4e1880
       '@nestjs/core': 8.2.4_947eef0805e788651766a5ee39d6841e
       '@nestjs/mapped-types': 1.0.0_1f21807b554b988a9d09258923dc67a4
-      fastify-swagger: 4.13.0
+      fastify-swagger: 4.13.1
       lodash: 4.17.21
       path-to-regexp: 3.2.0
       reflect-metadata: 0.1.13
@@ -4888,8 +4888,8 @@ packages:
       send: 0.17.2
     dev: false
 
-  /fastify-swagger/4.13.0:
-    resolution: {integrity: sha512-HQ4059nlrOaJ20opGP+9KXBtxobEgovLOov2BPsqaNkLpFyPcddoYoLeiQur4YuB53rxUE1mnGMLIPXKwvcwbg==}
+  /fastify-swagger/4.13.1:
+    resolution: {integrity: sha512-9MQ+YVo/2F9Bg2tXs5POccHau5znmHaneggjoyinqumD+n7wClu4uYwV8cNMikdr7zvoepVaYedPue1xHQwsgg==}
     dependencies:
       fastify-plugin: 3.0.0
       fastify-static: 4.5.0
