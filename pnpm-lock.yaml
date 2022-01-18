@@ -64,7 +64,7 @@ specifiers:
   sort-package-json: 1.53.1
   source-map-support: 0.5.21
   supertest: 6.2.1
-  ts-jest: 27.1.2
+  ts-jest: 27.1.3
   ts-node: 10.4.0
   tsconfig-paths: 3.12.0
   typescript: 4.5.4
@@ -139,7 +139,7 @@ devDependencies:
   sort-package-json: 1.53.1
   source-map-support: 0.5.21
   supertest: 6.2.1
-  ts-jest: 27.1.2_9364f2ad0b7b67f00a4d081c662c6871
+  ts-jest: 27.1.3_9364f2ad0b7b67f00a4d081c662c6871
   ts-node: 10.4.0_c0a8ca172db2ce87bc71f1a1cb132fc8
   tsconfig-paths: 3.12.0
   typescript: 4.5.4
@@ -5517,6 +5517,7 @@ packages:
 
   /graceful-fs/4.2.8:
     resolution: {integrity: sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==}
+    dev: true
 
   /graceful-fs/4.2.9:
     resolution: {integrity: sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==}
@@ -6660,7 +6661,7 @@ packages:
       '@types/node': 16.11.19
       chalk: 4.1.2
       ci-info: 3.3.0
-      graceful-fs: 4.2.8
+      graceful-fs: 4.2.9
       picomatch: 2.3.0
     dev: true
 
@@ -6852,7 +6853,7 @@ packages:
     dependencies:
       universalify: 2.0.0
     optionalDependencies:
-      graceful-fs: 4.2.8
+      graceful-fs: 4.2.9
 
   /jsonparse/1.3.1:
     resolution: {integrity: sha1-P02uSpH6wxX3EGL4UhzCOfE2YoA=}
@@ -9403,8 +9404,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /ts-jest/27.1.2_9364f2ad0b7b67f00a4d081c662c6871:
-    resolution: {integrity: sha512-eSOiJOWq6Hhs6Khzk5wKC5sgWIXgXqOCiIl1+3lfnearu58Hj4QpE5tUhQcA3xtZrELbcvAGCsd6HB8OsaVaTA==}
+  /ts-jest/27.1.3_9364f2ad0b7b67f00a4d081c662c6871:
+    resolution: {integrity: sha512-6Nlura7s6uM9BVUAoqLH7JHyMXjz8gluryjpPXxr3IxZdAXnU6FhjvVLHFtfd1vsE1p8zD1OJfskkc0jhTSnkA==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     hasBin: true
     peerDependencies:
