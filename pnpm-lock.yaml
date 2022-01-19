@@ -16,7 +16,7 @@ specifiers:
   '@nestjs/platform-fastify': 8.2.5
   '@nestjs/schematics': 8.0.5
   '@nestjs/swagger': 5.1.5
-  '@nestjs/terminus': 8.0.3
+  '@nestjs/terminus': 8.0.4
   '@nestjs/testing': 8.2.5
   '@types/ioredis': 4.28.7
   '@types/jest': 27.4.0
@@ -82,7 +82,7 @@ dependencies:
   '@nestjs/mongoose': 9.0.2_d0dcdd112d8bc8b008d76a6bfebdf6e6
   '@nestjs/platform-fastify': 8.2.5_dd9ef2e1e23f087665d46fe53bbbed58
   '@nestjs/swagger': 5.1.5_dff4c2a81d6d21516e1ab341abe507be
-  '@nestjs/terminus': 8.0.3_90187d3b27b9ec0e2b0c280de38fef53
+  '@nestjs/terminus': 8.0.4_90187d3b27b9ec0e2b0c280de38fef53
   class-transformer: 0.5.1
   class-validator: 0.13.2
   date-fns: 2.28.0
@@ -2311,8 +2311,8 @@ packages:
       - class-validator
     dev: false
 
-  /@nestjs/terminus/8.0.3_90187d3b27b9ec0e2b0c280de38fef53:
-    resolution: {integrity: sha512-w0AIGWduRYHpks8U5/HwTPQY/k+JchlayXJlHkMhjwSNNLGlFOoz5MKVC8DErtgz3U7TAyTYfOCXOaVN2yJtCg==}
+  /@nestjs/terminus/8.0.4_90187d3b27b9ec0e2b0c280de38fef53:
+    resolution: {integrity: sha512-KjeY7VLt0Az6pA2wO67nkL1QbE68yBb+FLZ7+aa+C/g/IKoDR668nqSuFzJarBrnFBTGEwDD09BwsgqkmymrbQ==}
     peerDependencies:
       '@nestjs/common': 8.x
       '@nestjs/core': 8.x
@@ -2321,7 +2321,7 @@ packages:
     dependencies:
       '@nestjs/common': 8.2.5_e2dd7264172553abc41c1a07952dd8ca
       '@nestjs/core': 8.2.5_4d34bcc4311a780925020c9f901d5309
-      check-disk-space: 3.0.1
+      check-disk-space: 3.1.0
       reflect-metadata: 0.1.13
       rxjs: 7.5.2
     dev: false
@@ -3650,8 +3650,8 @@ packages:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
     dev: true
 
-  /check-disk-space/3.0.1:
-    resolution: {integrity: sha512-wRG5ZihEZUXAKVCio5YkLgrHsHDrD+GjRBjxJvoJvN9wrze7EdvYGnOYJSsCyZ4b40jBa3lDmWDmESY9QDQGcg==}
+  /check-disk-space/3.1.0:
+    resolution: {integrity: sha512-4L3WVw4uPaBJocwnxTCWTTHc8mNu080pjCVBhZeWFdnaQBAremLHpJ1H90G+uEA0rJcW43fghYMsLBXID9X4Zg==}
     engines: {node: '>=12'}
     dev: false
 
