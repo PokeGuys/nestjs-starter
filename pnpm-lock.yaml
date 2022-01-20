@@ -48,7 +48,7 @@ specifiers:
   jest: 27.4.7
   lint-staged: 12.1.7
   lodash.pick: 4.4.0
-  mongoose: 6.1.6
+  mongoose: 6.1.7
   nestjs-command: 3.1.1
   nestjs-i18n: 8.2.2
   nestjs-pino: 2.4.0
@@ -79,7 +79,7 @@ dependencies:
   '@nestjs/common': 8.2.5_e2dd7264172553abc41c1a07952dd8ca
   '@nestjs/config': 1.1.6_4d34bcc4311a780925020c9f901d5309
   '@nestjs/core': 8.2.5_4d34bcc4311a780925020c9f901d5309
-  '@nestjs/mongoose': 9.0.2_d0dcdd112d8bc8b008d76a6bfebdf6e6
+  '@nestjs/mongoose': 9.0.2_5c16227ad663218b7d48b0784b1385b5
   '@nestjs/platform-fastify': 8.2.5_dd9ef2e1e23f087665d46fe53bbbed58
   '@nestjs/swagger': 5.1.5_dff4c2a81d6d21516e1ab341abe507be
   '@nestjs/terminus': 8.0.4_90187d3b27b9ec0e2b0c280de38fef53
@@ -92,7 +92,7 @@ dependencies:
   ioredis: 4.28.3
   ioredis-mock: 5.8.1_6a52744d70aed752fa26fa182b46871a
   lodash.pick: 4.4.0
-  mongoose: 6.1.6
+  mongoose: 6.1.7
   nestjs-command: 3.1.1_c35a068bd1e6d881f3bf561338b955b9
   nestjs-i18n: 8.2.2_7d6b1cb1cfc46716b5e85843a6686209
   nestjs-pino: 2.4.0_pino-http@6.5.0
@@ -2220,7 +2220,7 @@ packages:
       reflect-metadata: 0.1.13
     dev: false
 
-  /@nestjs/mongoose/9.0.2_d0dcdd112d8bc8b008d76a6bfebdf6e6:
+  /@nestjs/mongoose/9.0.2_5c16227ad663218b7d48b0784b1385b5:
     resolution: {integrity: sha512-v4Umk3hssJ1RJJIe2LBVHvrsGfY+srq2nfOVCw36PGe7+eObzSBIryMJi+h2mTZpYIohNRGM2O66clEmhctYQQ==}
     peerDependencies:
       '@nestjs/common': ^6.0.0 || ^7.0.0 || ^8.0.0
@@ -2231,7 +2231,7 @@ packages:
     dependencies:
       '@nestjs/common': 8.2.5_e2dd7264172553abc41c1a07952dd8ca
       '@nestjs/core': 8.2.5_4d34bcc4311a780925020c9f901d5309
-      mongoose: 6.1.6
+      mongoose: 6.1.7
       reflect-metadata: 0.1.13
       rxjs: 7.5.2
     dev: false
@@ -7479,8 +7479,8 @@ packages:
       saslprep: 1.0.3
     dev: false
 
-  /mongoose/6.1.6:
-    resolution: {integrity: sha512-wvNRJ547x/Bn3EMhwbVInNsEp2OdlMxk4Q/vfgAkw8OI+giZQ72S90ZH0H6VzzIhs4lCU9SwXHYa2O0sPicnEQ==}
+  /mongoose/6.1.7:
+    resolution: {integrity: sha512-GqU/G/5yu/CWBHdW24cfGPsW4rADER+eeXj+bwvb6mLjg6uAASl8GnE6pmEbafZJ4Uv9V7jf5LaBMJMNwvQEtg==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@types/node': 16.11.19
