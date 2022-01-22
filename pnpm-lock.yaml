@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@aws-sdk/client-s3': 3.47.0
-  '@commitlint/cli': 16.0.2
+  '@commitlint/cli': 16.0.3
   '@commitlint/config-angular': 16.0.0
   '@commitlint/config-conventional': 16.0.0
   '@mikro-orm/core': 4.5.10
@@ -107,7 +107,7 @@ dependencies:
   yargs: 17.3.1
 
 devDependencies:
-  '@commitlint/cli': 16.0.2_@types+node@16.11.21
+  '@commitlint/cli': 16.0.3_@types+node@16.11.21
   '@commitlint/config-angular': 16.0.0
   '@commitlint/config-conventional': 16.0.0
   '@nestjs/cli': 8.2.0_eslint@8.7.0
@@ -1378,8 +1378,8 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
-  /@commitlint/cli/16.0.2_@types+node@16.11.21:
-    resolution: {integrity: sha512-Jt7iaBjoLGC5Nq4dHPTvTYnqPGkElFPBtTXTvBpTgatZApczyjI2plE0oG4GYWPp1suHIS/VdVDOMpPZjGVusg==}
+  /@commitlint/cli/16.0.3_@types+node@16.11.21:
+    resolution: {integrity: sha512-SB1od4/1ek5SShNKjKgUdpqiVNulNVgCkjkV4Zz9zLKrxn3sPcgvXMQNh/wy0/T4WPUVgHrHGcxWYOYXxrGwpg==}
     engines: {node: '>=v12'}
     hasBin: true
     dependencies:
