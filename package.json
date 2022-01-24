@@ -52,7 +52,7 @@
     "date-fns": "2.28.0",
     "fastify": "3.27.0",
     "fastify-swagger": "4.13.1",
-    "firebase-admin": "10.0.1",
+    "firebase-admin": "10.0.2",
     "ioredis": "4.28.3",
     "ioredis-mock": "5.8.4",
     "lodash.pick": "4.4.0",
