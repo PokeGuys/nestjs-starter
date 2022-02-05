@@ -48,7 +48,7 @@ specifiers:
   jest: 27.4.7
   lint-staged: 12.3.3
   lodash.pick: 4.4.0
-  mongoose: 6.1.10
+  mongoose: 6.2.0
   nestjs-command: 3.1.1
   nestjs-i18n: 8.2.2
   nestjs-pino: 2.5.0
@@ -79,7 +79,7 @@ dependencies:
   '@nestjs/common': 8.2.6_e2dd7264172553abc41c1a07952dd8ca
   '@nestjs/config': 1.1.6_0f75cad7c3bc55c714d492fe95499bdf
   '@nestjs/core': 8.2.6_0f75cad7c3bc55c714d492fe95499bdf
-  '@nestjs/mongoose': 9.0.2_09303b326da6774dd9e3b5aa7050774e
+  '@nestjs/mongoose': 9.0.2_9c3aba9c7644b1cc97e988af68e2b800
   '@nestjs/platform-fastify': 8.2.6_732a54a2558f64827b8cc4f9baac4f1f
   '@nestjs/swagger': 5.2.0_987c4858c744e9c8ab625635b04a3eff
   '@nestjs/terminus': 8.0.4_05842440808b455eff1a14b6221a041b
@@ -92,7 +92,7 @@ dependencies:
   ioredis: 4.28.4
   ioredis-mock: 7.0.0_ioredis@4.28.4
   lodash.pick: 4.4.0
-  mongoose: 6.1.10
+  mongoose: 6.2.0
   nestjs-command: 3.1.1_f99b21be710bcab4951ac87dd6dc0166
   nestjs-i18n: 8.2.2_9bae17a8d6ec3fe8121717261e5ff195
   nestjs-pino: 2.5.0_pino-http@6.6.0
@@ -2215,7 +2215,7 @@ packages:
       reflect-metadata: 0.1.13
     dev: false
 
-  /@nestjs/mongoose/9.0.2_09303b326da6774dd9e3b5aa7050774e:
+  /@nestjs/mongoose/9.0.2_9c3aba9c7644b1cc97e988af68e2b800:
     resolution: {integrity: sha512-v4Umk3hssJ1RJJIe2LBVHvrsGfY+srq2nfOVCw36PGe7+eObzSBIryMJi+h2mTZpYIohNRGM2O66clEmhctYQQ==}
     peerDependencies:
       '@nestjs/common': ^6.0.0 || ^7.0.0 || ^8.0.0
@@ -2226,7 +2226,7 @@ packages:
     dependencies:
       '@nestjs/common': 8.2.6_e2dd7264172553abc41c1a07952dd8ca
       '@nestjs/core': 8.2.6_0f75cad7c3bc55c714d492fe95499bdf
-      mongoose: 6.1.10
+      mongoose: 6.2.0
       reflect-metadata: 0.1.13
       rxjs: 7.5.2
     dev: false
@@ -3528,6 +3528,13 @@ packages:
 
   /bson/4.6.0:
     resolution: {integrity: sha512-8jw1NU1hglS+Da1jDOUYuNcBJ4cNHCFIqzlwoFNnsTOg2R/ox0aTYcTiBN4dzRa9q7Cvy6XErh3L8ReTEb9AQQ==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      buffer: 5.7.1
+    dev: false
+
+  /bson/4.6.1:
+    resolution: {integrity: sha512-I1LQ7Hz5zgwR4QquilLNZwbhPw0Apx7i7X9kGMBTsqPdml/03Q9NBtD9nt/19ahjlphktQImrnderxqpzeVDjw==}
     engines: {node: '>=6.9.0'}
     dependencies:
       buffer: 5.7.1
@@ -5871,6 +5878,10 @@ packages:
       - supports-color
     dev: false
 
+  /ip/1.1.5:
+    resolution: {integrity: sha1-vd7XARQpCCjAoDnnLvJfWq7ENUo=}
+    dev: false
+
   /ipaddr.js/1.9.1:
     resolution: {integrity: sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==}
     engines: {node: '>= 0.10'}
@@ -7451,25 +7462,25 @@ packages:
       whatwg-url: 11.0.0
     dev: false
 
-  /mongodb/4.2.2:
-    resolution: {integrity: sha512-zt8rCTnTKyMQppyt63qMnrLM5dbADgUk18ORPF1XbtHLIYCyc9hattaYHi0pqMvNxDpgGgUofSVzS+UQErgTug==}
+  /mongodb/4.3.1:
+    resolution: {integrity: sha512-sNa8APSIk+r4x31ZwctKjuPSaeKuvUeNb/fu/3B6dRM02HpEgig7hTHM8A/PJQTlxuC/KFWlDlQjhsk/S43tBg==}
     engines: {node: '>=12.9.0'}
     dependencies:
-      bson: 4.6.0
+      bson: 4.6.1
       denque: 2.0.1
       mongodb-connection-string-url: 2.4.1
+      socks: 2.6.1
     optionalDependencies:
       saslprep: 1.0.3
     dev: false
 
-  /mongoose/6.1.10:
-    resolution: {integrity: sha512-OELTPFun6+UHv+A7Fvig8bdOWFXcuD1nPeU86lsnIBadGbwduJAGKmCYDGIS6bt9oQtyUayHlndfVgzQF3AaUA==}
+  /mongoose/6.2.0:
+    resolution: {integrity: sha512-kimHjks1FC4HkqM4FVNWxtGor6wYelHgl6eJ6GJmmJvMCI4FNGLwFceSL6hs7dHLZJnxIyGVqQjT/XTXCbjzpA==}
     engines: {node: '>=12.0.0'}
     dependencies:
-      '@types/node': 16.11.22
       bson: 4.6.0
       kareem: 2.3.3
-      mongodb: 4.2.2
+      mongodb: 4.3.1
       mpath: 0.8.4
       mquery: 4.0.2
       ms: 2.1.2
@@ -8807,6 +8818,11 @@ packages:
       is-fullwidth-code-point: 4.0.0
     dev: true
 
+  /smart-buffer/4.2.0:
+    resolution: {integrity: sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==}
+    engines: {node: '>= 6.0.0', npm: '>= 3.0.0'}
+    dev: false
+
   /snakeize/0.1.0:
     resolution: {integrity: sha1-EMCI2LWOsHazIpu1oE4jLOEmQi0=}
     dev: false
@@ -8840,6 +8856,14 @@ packages:
       source-map: 0.5.7
       source-map-resolve: 0.5.3
       use: 3.1.1
+    dev: false
+
+  /socks/2.6.1:
+    resolution: {integrity: sha512-kLQ9N5ucj8uIcxrDwjm0Jsqk06xdpBjGNQtpXy4Q8/QY2k+fY7nZH8CARy+hkbG+SGAovmzzuauCpBlb8FrnBA==}
+    engines: {node: '>= 10.13.0', npm: '>= 3.0.0'}
+    dependencies:
+      ip: 1.1.5
+      smart-buffer: 4.2.0
     dev: false
 
   /sonic-boom/1.4.1:
