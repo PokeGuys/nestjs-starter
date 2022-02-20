@@ -51,7 +51,7 @@
     "class-validator": "0.13.2",
     "date-fns": "2.28.0",
     "fastify": "3.27.0",
-    "fastify-swagger": "4.13.1",
+    "fastify-swagger": "4.15.0",
     "firebase-admin": "10.0.2",
     "ioredis": "4.28.5",
     "ioredis-mock": "7.0.0",
