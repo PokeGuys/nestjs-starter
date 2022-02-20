@@ -39,7 +39,7 @@ specifiers:
   eslint-plugin-prettier: 4.0.0
   eslint-plugin-promise: 6.0.0
   fastify: 3.27.0
-  fastify-swagger: 4.13.1
+  fastify-swagger: 4.15.0
   firebase-admin: 10.0.2
   husky: 7.0.4
   ioredis: 4.28.5
@@ -81,13 +81,13 @@ dependencies:
   '@nestjs/core': 8.2.6_b1c87d49cb3cb6bde37bc22ce42ae20e
   '@nestjs/mongoose': 9.0.2_093afb0d011de9b9a657428a948c1776
   '@nestjs/platform-fastify': 8.2.6_732a54a2558f64827b8cc4f9baac4f1f
-  '@nestjs/swagger': 5.2.0_987c4858c744e9c8ab625635b04a3eff
+  '@nestjs/swagger': 5.2.0_8b4dc6ed147102e7e58adab242f2b7d4
   '@nestjs/terminus': 8.0.4_70ecef2953694850f5e4e5e607558448
   class-transformer: 0.5.1
   class-validator: 0.13.2
   date-fns: 2.28.0
   fastify: 3.27.0
-  fastify-swagger: 4.13.1
+  fastify-swagger: 4.15.0
   firebase-admin: 10.0.2
   ioredis: 4.28.5
   ioredis-mock: 7.0.0_ioredis@4.28.5
@@ -2279,7 +2279,7 @@ packages:
       - chokidar
     dev: true
 
-  /@nestjs/swagger/5.2.0_987c4858c744e9c8ab625635b04a3eff:
+  /@nestjs/swagger/5.2.0_8b4dc6ed147102e7e58adab242f2b7d4:
     resolution: {integrity: sha512-wcW2KCe7irwBw0WKsb03uFk4gnjqNcAcJxXGZxi6ljFiDgyLrQtx5MpE95o703tnn4V/hZR8MqMNFOXuup7Pqw==}
     peerDependencies:
       '@nestjs/common': ^8.0.0
@@ -2296,7 +2296,7 @@ packages:
       '@nestjs/common': 8.2.6_41a73a83cecc93a04fa529b9098e66bd
       '@nestjs/core': 8.2.6_b1c87d49cb3cb6bde37bc22ce42ae20e
       '@nestjs/mapped-types': 1.0.1_cda5296fe38bb7a3dcdb892503001834
-      fastify-swagger: 4.13.1
+      fastify-swagger: 4.15.0
       lodash: 4.17.21
       path-to-regexp: 3.2.0
       reflect-metadata: 0.1.13
@@ -4917,8 +4917,8 @@ packages:
       send: 0.17.2
     dev: false
 
-  /fastify-swagger/4.13.1:
-    resolution: {integrity: sha512-9MQ+YVo/2F9Bg2tXs5POccHau5znmHaneggjoyinqumD+n7wClu4uYwV8cNMikdr7zvoepVaYedPue1xHQwsgg==}
+  /fastify-swagger/4.15.0:
+    resolution: {integrity: sha512-gFHc1FcvYLvhGhQvtb3KlxnF+CeM/0mIDJ6E12/kBTPJ1tYDeqIXwAdKZJ19abcReYEH6J3UAnLXDh7cmhT/IQ==}
     dependencies:
       fastify-plugin: 3.0.0
       fastify-static: 4.5.0
