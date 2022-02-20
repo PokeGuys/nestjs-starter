@@ -96,7 +96,7 @@
     "eslint-plugin-promise": "6.0.0",
     "husky": "7.0.4",
     "is-ci": "3.0.1",
-    "jest": "27.4.7",
+    "jest": "27.5.1",
     "lint-staged": "12.3.4",
     "nyc": "15.1.0",
     "prettier": "2.5.1",
