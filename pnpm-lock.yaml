@@ -43,7 +43,7 @@ specifiers:
   firebase-admin: 10.0.2
   husky: 7.0.4
   ioredis: 4.28.5
-  ioredis-mock: 7.0.0
+  ioredis-mock: 7.0.1
   is-ci: 3.0.1
   jest: 27.5.1
   lint-staged: 12.3.4
@@ -90,7 +90,7 @@ dependencies:
   fastify-swagger: 4.15.0
   firebase-admin: 10.0.2
   ioredis: 4.28.5
-  ioredis-mock: 7.0.0_ioredis@4.28.5
+  ioredis-mock: 7.0.1_ioredis@4.28.5
   lodash.pick: 4.4.0
   mongoose: 6.2.3
   nestjs-command: 3.1.1_f99b21be710bcab4951ac87dd6dc0166
@@ -5836,8 +5836,8 @@ packages:
     engines: {node: '>= 0.10'}
     dev: false
 
-  /ioredis-mock/7.0.0_ioredis@4.28.5:
-    resolution: {integrity: sha512-JLsog7ivJq6UyqFvcPnv/Cz+0BZY3UvdhpFWsvKSEBY7XM70Td0gq0MZFbZowwLe4D0daKxVCh6vw5i8Qx4Syw==}
+  /ioredis-mock/7.0.1_ioredis@4.28.5:
+    resolution: {integrity: sha512-/YuBx1mnTh8QKBPGqRUEFNg5JdXAMrgiRdj4Ke7AxIZkEOZ+vfDzkOz8mONSCYu0H1m28hIyxwTlaHT5J0mX4Q==}
     engines: {node: '>=12'}
     peerDependencies:
       ioredis: 4.x
