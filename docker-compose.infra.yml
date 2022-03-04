@@ -48,3 +48,23 @@ services:
     ports:
       - '${RABBITMQ_NODE_HOST_PORT:-5672}:5672'
       - '${RABBITMQ_MANAGEMENT_HTTP_HOST_PORT:-15672}:15672'
+
+  opensearch:
+    image: opensearchproject/opensearch:1.2.4
+    environment:
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true # along with the memlock settings below, disables swapping
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    volumes:
+      - ./.docker/es/data:/usr/share/elasticsearch/data
+    ports:
+      - 29200:9200
+      - 29600:9600
+
+  kibana:
+    image: opensearchproject/opensearch-dashboards:1.2.0
+    environment:
+      OPENSEARCH_URL: https://opensearch:9200
+      OPENSEARCH_HOSTS: https://opensearch:9200
+    ports:
+      - 25601:5601
