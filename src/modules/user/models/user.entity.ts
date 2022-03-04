@@ -1,13 +1,15 @@
+import { Entity, OptionalProps, Property } from '@mikro-orm/core';
+import { string } from 'yargs';
 import { BaseUser } from '@common/dto/base-user';
 import { UserStatus } from '@common/enum/user-status.enum';
-import { AbstractEntity } from '@common/models/abstract.entity';
-import { Entity, Property } from '@mikro-orm/core';
+import { IEntity, AbstractEntity } from '@common/models';
 import { UserDto } from '@modules/user/dto/responses/user.dto';
 import { UserType } from '@modules/user/interfaces';
-import { string } from 'yargs';
 
 @Entity()
 export class User extends AbstractEntity<UserDto, UserType> implements BaseUser, UserType {
+  public [OptionalProps]?: 'status' | IEntity[typeof OptionalProps];
+
   @Property({ type: string, default: UserStatus.Active })
   public status!: UserStatus;
 

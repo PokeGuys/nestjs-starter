@@ -1,5 +1,4 @@
 import { MikroORM } from '@mikro-orm/core';
-import { UseRequestContext } from '@mikro-orm/nestjs';
 import { DEFAULT_HEALTH_CHECK_TIMEOUT } from '@modules/health/health.constants';
 import { Injectable, Scope } from '@nestjs/common';
 import {
@@ -32,7 +31,6 @@ export class MikroOrmHealthIndicator extends HealthIndicator {
     return promiseTimeout(timeout, connection.isConnected());
   }
 
-  @UseRequestContext()
   public async pingCheck(
     key: string,
     options: MikroOrmPingCheckSettings = {},

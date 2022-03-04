@@ -1,9 +1,9 @@
-import { IEntity } from '@common/models/entity.interface';
+import { IEntityType } from '@common/models/entity.interface';
 import { RedisClient } from '@libraries/redis';
 import { ClassConstructor, plainToInstance } from 'class-transformer';
 import { ICachedRepository } from './interfaces';
 
-export abstract class AbstractCachedRepository<TEntity extends IEntity = IEntity>
+export abstract class AbstractCachedRepository<TEntity extends IEntityType = IEntityType>
   implements ICachedRepository
 {
   protected readonly redisClient: RedisClient;
@@ -29,7 +29,7 @@ export abstract class AbstractCachedRepository<TEntity extends IEntity = IEntity
     return null;
   }
 
-  protected async storeCache(key: string, entity: IEntity) {
+  protected async storeCache(key: string, entity: IEntityType) {
     return this.redisClient.set(key, JSON.stringify(entity));
   }
 }

@@ -1,7 +1,7 @@
 import { UserStatus } from '@common/enum';
-import { IEntity } from '@common/models';
+import { IEntityType } from '@common/models';
 
-export type UserType = IEntity & {
+export type UserType = IEntityType & {
   status: UserStatus;
   email: string;
   password: string;
