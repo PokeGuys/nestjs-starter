@@ -1,6 +1,6 @@
 import { AbstractCachedRepository } from '@common/repositories';
 import { InjectRedis, RedisClient } from '@libraries/redis';
-import { EntityData } from '@mikro-orm/core';
+import { RequiredEntityData } from '@mikro-orm/core';
 import { InjectRepository } from '@mikro-orm/nestjs';
 import { EntityRepository } from '@mikro-orm/postgresql';
 import { User } from '@modules/user/models/user.entity';
@@ -36,7 +36,7 @@ export class CachedUserRepository extends AbstractCachedRepository<User> {
     return user;
   }
 
-  public async create(data: EntityData<User>): Promise<User> {
+  public async create(data: RequiredEntityData<User>): Promise<User> {
     const user = this.userRepository.create(data);
     const cacheKey = this.buildCacheKey(USER_REPOSITORY_CACHE_KEY, user.id);
     await Promise.all([
