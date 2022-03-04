@@ -28,8 +28,8 @@ import {
 } from 'nestjs-i18n';
 import { MongooseModule } from '@nestjs/mongoose';
 import { stdSerializers } from 'pino';
+import { RedisModule } from '@libraries/redis';
 import { Language } from './enum';
-import { RedisModule } from '../libraries/redis';
 
 @Module({
   imports: [
