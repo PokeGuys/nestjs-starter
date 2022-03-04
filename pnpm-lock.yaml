@@ -6,7 +6,7 @@ specifiers:
   '@commitlint/config-angular': 16.2.1
   '@commitlint/config-conventional': 16.2.1
   '@mikro-orm/core': 4.5.10
-  '@mikro-orm/nestjs': 4.3.1
+  '@mikro-orm/nestjs': 5.0.0
   '@mikro-orm/postgresql': 4.5.10
   '@nestjs/cli': 8.2.1
   '@nestjs/common': 8.4.0
@@ -74,7 +74,7 @@ specifiers:
 dependencies:
   '@aws-sdk/client-s3': 3.53.1
   '@mikro-orm/core': 4.5.10_@mikro-orm+postgresql@4.5.10
-  '@mikro-orm/nestjs': 4.3.1_9f7e43744458a64a6161e1f03a09c619
+  '@mikro-orm/nestjs': 5.0.0_9f7e43744458a64a6161e1f03a09c619
   '@mikro-orm/postgresql': 4.5.10_@mikro-orm+core@4.5.10
   '@nestjs/common': 8.4.0_41a73a83cecc93a04fa529b9098e66bd
   '@nestjs/config': 1.2.0_8b36610a93f76db1b35891575c63ff52
@@ -2102,13 +2102,20 @@ packages:
       - supports-color
     dev: false
 
-  /@mikro-orm/nestjs/4.3.1_9f7e43744458a64a6161e1f03a09c619:
-    resolution: {integrity: sha512-wfWbKpmvQyUyJhsjbguRySNZr1xOUqB198kW0FL7sgBuM/+cnvDEC1OaD0SAF8Tl+f5uN3D+GkqVZmDXWfol9A==}
-    engines: {node: '>= 10.13.0'}
+  /@mikro-orm/nestjs/5.0.0_9f7e43744458a64a6161e1f03a09c619:
+    resolution: {integrity: sha512-BWvrrsyRvWnRjOREy+Qhv+Ey3KgbJ3xYkuAeThiNo5fJrVG39Ipn/Ha8Ct+cRDy3ajH47p6aGCuPm/oRpchABw==}
+    engines: {node: '>= 14.0.0'}
     peerDependencies:
-      '@mikro-orm/core': ^4.0.0||^5.0.0-dev.0
-      '@nestjs/common': ^7.0.0||^8.0.0
-      '@nestjs/core': ^7.0.0||^8.0.0
+      '@mikro-orm/core': ^5.0.0
+      '@mikro-orm/knex': ^5.0.0
+      '@mikro-orm/mongodb': ^5.0.0
+      '@nestjs/common': ^8.0.0
+      '@nestjs/core': ^8.0.0
+    peerDependenciesMeta:
+      '@mikro-orm/knex':
+        optional: true
+      '@mikro-orm/mongodb':
+        optional: true
     dependencies:
       '@mikro-orm/core': 4.5.10_@mikro-orm+postgresql@4.5.10
       '@nestjs/common': 8.4.0_41a73a83cecc93a04fa529b9098e66bd
