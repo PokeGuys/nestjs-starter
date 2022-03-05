@@ -24,7 +24,7 @@ specifiers:
   '@types/node': 16.11.26
   '@types/supertest': 2.0.11
   '@types/uuid': 8.3.4
-  '@types/yargs': 17.0.8
+  '@types/yargs': 17.0.9
   '@typescript-eslint/eslint-plugin': 5.12.1
   '@typescript-eslint/parser': 5.12.1
   class-transformer: 0.5.1
@@ -119,7 +119,7 @@ devDependencies:
   '@types/node': 16.11.26
   '@types/supertest': 2.0.11
   '@types/uuid': 8.3.4
-  '@types/yargs': 17.0.8
+  '@types/yargs': 17.0.9
   '@typescript-eslint/eslint-plugin': 5.12.1_0c889e8d1c54edfeeed2f78a8b346f43
   '@typescript-eslint/parser': 5.12.1_eslint@8.9.0+typescript@4.6.2
   eslint: 8.9.0
@@ -2783,8 +2783,8 @@ packages:
       '@types/yargs-parser': 20.2.1
     dev: true
 
-  /@types/yargs/17.0.8:
-    resolution: {integrity: sha512-wDeUwiUmem9FzsyysEwRukaEdDNcwbROvQ9QGRKaLI6t+IltNzbn4/i4asmB10auvZGQCzSQ6t0GSczEThlUXw==}
+  /@types/yargs/17.0.9:
+    resolution: {integrity: sha512-Ci8+4/DOtkHRylcisKmVMtmVO5g7weUVCKcsu1sJvF1bn0wExTmbHmhFKj7AnEm0de800iovGhdSKzYnzbaHpg==}
     dependencies:
       '@types/yargs-parser': 20.2.1
     dev: true
