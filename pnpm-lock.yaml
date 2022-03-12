@@ -53,7 +53,7 @@ specifiers:
   nestjs-i18n: 8.2.2
   nestjs-pino: 2.5.0
   nyc: 15.1.0
-  pino: 7.8.0
+  pino: 7.8.1
   pino-http: 6.6.0
   prettier: 2.5.1
   redis-commands: 1.7.0
@@ -96,7 +96,7 @@ dependencies:
   nestjs-command: 3.1.1_a8d28b37788859920cee08e122c3f4bf
   nestjs-i18n: 8.2.2_4604b833f859e1d7c77a3312c47f04b0
   nestjs-pino: 2.5.0_pino-http@6.6.0
-  pino: 7.8.0
+  pino: 7.8.1
   pino-http: 6.6.0
   redis-commands: 1.7.0
   redlock: 4.2.0
@@ -7546,7 +7546,7 @@ packages:
     dependencies:
       fast-url-parser: 1.1.3
       get-caller-file: 2.0.5
-      pino: 7.8.0
+      pino: 7.8.1
       pino-std-serializers: 5.0.0
     dev: false
 
@@ -7575,8 +7575,8 @@ packages:
       sonic-boom: 1.4.1
     dev: false
 
-  /pino/7.8.0:
-    resolution: {integrity: sha512-Ynw2HRVapiyj+ZGfUcpms+SRgDKFIy0ztaFUf3X6IHh+vsysMvn+tpV/Ej3gyutPp4n9tgH6ZkkCAelSvP5zmQ==}
+  /pino/7.8.1:
+    resolution: {integrity: sha512-G0AVnaJBBtbdOpZ3z0/QD3R57BWwjVo4K7e+c5mHKjNCYIY1FIKuNlWjVJfCVQ4Bq6iN/yAAh5OCeeTI7OXosA==}
     hasBin: true
     dependencies:
       fast-redact: 3.0.2
