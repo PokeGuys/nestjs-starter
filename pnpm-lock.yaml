@@ -10,7 +10,7 @@ specifiers:
   '@mikro-orm/postgresql': 5.1.0
   '@nestjs/cli': 8.2.3
   '@nestjs/common': 8.4.1
-  '@nestjs/config': 1.2.1
+  '@nestjs/config': 2.0.0
   '@nestjs/core': 8.4.1
   '@nestjs/mongoose': 9.0.3
   '@nestjs/platform-fastify': 8.4.1
@@ -77,7 +77,7 @@ dependencies:
   '@mikro-orm/nestjs': 5.0.1_d13479796ebd8198e2e6d8398517afef
   '@mikro-orm/postgresql': 5.1.0_@mikro-orm+core@5.1.0
   '@nestjs/common': 8.4.1_5199533202e21c7185c9d97f881e2827
-  '@nestjs/config': 1.2.1_b8034d7883829e8dea958456cea5a5cb
+  '@nestjs/config': 2.0.0_b8034d7883829e8dea958456cea5a5cb
   '@nestjs/core': 8.4.1_b8034d7883829e8dea958456cea5a5cb
   '@nestjs/mongoose': 9.0.3_9143f0481171cc20a4f0cadb108b4e27
   '@nestjs/platform-fastify': 8.4.1_214a294e539403889bf33d78c1f08a26
@@ -2212,8 +2212,8 @@ packages:
       - debug
     dev: false
 
-  /@nestjs/config/1.2.1_b8034d7883829e8dea958456cea5a5cb:
-    resolution: {integrity: sha512-EgaGTXvG4unD5lGWmdSrUFrkGpX32lQGE/8qS60EnL82sIZV7HT1ZL7ib5S86P1nB+DnFDbDhDqTaZ3mivTyOg==}
+  /@nestjs/config/2.0.0_b8034d7883829e8dea958456cea5a5cb:
+    resolution: {integrity: sha512-Hi1k/1S5ogsS5c0OtNm72thiLSngijOaLDFaGI5ZPxNGpF23lctPg6ox3pYIOhXVRX/u+eiUIp71gswH2k8YNw==}
     peerDependencies:
       '@nestjs/common': ^7.0.0 || ^8.0.0
       reflect-metadata: ^0.1.13
@@ -2221,7 +2221,7 @@ packages:
     dependencies:
       '@nestjs/common': 8.4.1_5199533202e21c7185c9d97f881e2827
       dotenv: 16.0.0
-      dotenv-expand: 5.1.0
+      dotenv-expand: 8.0.2
       lodash: 4.17.21
       reflect-metadata: 0.1.13
       rxjs: 7.5.5
@@ -4166,8 +4166,9 @@ packages:
     dependencies:
       is-obj: 2.0.0
 
-  /dotenv-expand/5.1.0:
-    resolution: {integrity: sha512-YXQl1DSa4/PQyRfgrv6aoNjhasp/p4qs9FjJ4q4cQk+8m4r6k4ZSiEyytKG8f8W9gi8WsQtIObNmKd+tMzNTmA==}
+  /dotenv-expand/8.0.2:
+    resolution: {integrity: sha512-vKKAk+VOzAWOV/dPIeSYqhgC/TQY+6L6Ibkzfsr8xd1stdBsTuGu9asCOXgbYbBeS+f2Y6lqqEuw7riOA+xEUQ==}
+    engines: {node: '>=12'}
     dev: false
 
   /dotenv/16.0.0:
