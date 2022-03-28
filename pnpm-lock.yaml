@@ -50,7 +50,7 @@ specifiers:
   lodash.pick: 4.4.0
   mongoose: 6.2.8
   nestjs-command: 3.1.1
-  nestjs-i18n: 8.2.2
+  nestjs-i18n: 8.3.2
   nestjs-pino: 2.5.1
   nyc: 15.1.0
   pino: 7.9.2
@@ -94,7 +94,7 @@ dependencies:
   lodash.pick: 4.4.0
   mongoose: 6.2.8
   nestjs-command: 3.1.1_5a933e0ef30cd8dc6ca5dc34107f6c87
-  nestjs-i18n: 8.2.2_80ffe012d9bfde06ef4acff5e0146952
+  nestjs-i18n: 8.3.2_80ffe012d9bfde06ef4acff5e0146952
   nestjs-pino: 2.5.1_pino-http@6.6.0
   pino: 7.9.2
   pino-http: 6.6.0
@@ -3560,21 +3560,6 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
-  /chokidar/3.5.2:
-    resolution: {integrity: sha512-ekGhOnNVPgT77r4K/U3GDhu+FQ2S8TnK/s2KbIGXi0SZWuwkZ2QNyfWdZW+TVfn84DpEP7rLeCt2UI6bJ8GwbQ==}
-    engines: {node: '>= 8.10.0'}
-    dependencies:
-      anymatch: 3.1.2
-      braces: 3.0.2
-      glob-parent: 5.1.2
-      is-binary-path: 2.1.0
-      is-glob: 4.0.3
-      normalize-path: 3.0.0
-      readdirp: 3.6.0
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: false
-
   /chokidar/3.5.3:
     resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
     engines: {node: '>= 8.10.0'}
@@ -3588,7 +3573,6 @@ packages:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.2
-    dev: true
 
   /chrome-trace-event/1.0.3:
     resolution: {integrity: sha512-p3KULyQg4S7NIHixdwbGX+nFHkoBiA4YQmyWtjb8XngSKV124nJmRysgAeujbUVb15vh+RvFUfCPqU7rXk+hZg==}
@@ -7008,8 +6992,8 @@ packages:
       yargs: 17.4.0
     dev: false
 
-  /nestjs-i18n/8.2.2_80ffe012d9bfde06ef4acff5e0146952:
-    resolution: {integrity: sha512-xjmr9wFnDDJqEOPRjLxDCpKpHHvFY+pLk4UQch2lj9VqXXA507u250C5eYVNLQM6T3sbuj6i2cKH+JqGB3AvNQ==}
+  /nestjs-i18n/8.3.2_80ffe012d9bfde06ef4acff5e0146952:
+    resolution: {integrity: sha512-9JDqhRt9tqL7zblm41s+PHQ+OO4tYcMHr4qsBR0sarl0eLJ5NXOEesONIR04JmCIIQjbUMXFJtBr1xXurgEfcA==}
     peerDependencies:
       '@nestjs/common': '*'
       '@nestjs/core': '*'
@@ -7018,7 +7002,7 @@ packages:
       '@nestjs/common': 8.4.2_5199533202e21c7185c9d97f881e2827
       '@nestjs/core': 8.4.2_f0f7bf27b9dd8662d8de3791cddb8c93
       accept-language-parser: 1.5.0
-      chokidar: 3.5.2
+      chokidar: 3.5.3
       cookie: 0.4.1
       rxjs: 7.5.5
       string-format: 2.0.0
