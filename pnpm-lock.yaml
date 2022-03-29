@@ -39,7 +39,7 @@ specifiers:
   eslint-plugin-prettier: 4.0.0
   eslint-plugin-promise: 6.0.0
   fastify: 3.27.4
-  fastify-swagger: 5.0.0
+  fastify-swagger: 5.1.0
   firebase-admin: 10.0.2
   husky: 7.0.4
   ioredis: 4.28.5
@@ -81,13 +81,13 @@ dependencies:
   '@nestjs/core': 8.4.3_00edab75de3d00160109b98add317aa9
   '@nestjs/mongoose': 9.0.3_d578fcfbfa8ce94094a226ed73218658
   '@nestjs/platform-fastify': 8.4.3_2da8a9968be4406723e870d9d23c8df0
-  '@nestjs/swagger': 5.2.1_69feec29ac96fa0b343d55073b6c98b0
+  '@nestjs/swagger': 5.2.1_3355817c6a028d8eed0197cb4c1b8d4c
   '@nestjs/terminus': 8.0.6_a2dbd976216bca99360ba5040550d5c7
   class-transformer: 0.5.1
   class-validator: 0.13.2
   date-fns: 2.28.0
   fastify: 3.27.4
-  fastify-swagger: 5.0.0
+  fastify-swagger: 5.1.0
   firebase-admin: 10.0.2
   ioredis: 4.28.5
   ioredis-mock: 7.2.0_ioredis@4.28.5
@@ -2344,7 +2344,7 @@ packages:
       - chokidar
     dev: true
 
-  /@nestjs/swagger/5.2.1_69feec29ac96fa0b343d55073b6c98b0:
+  /@nestjs/swagger/5.2.1_3355817c6a028d8eed0197cb4c1b8d4c:
     resolution: {integrity: sha512-7dNa08WCnTsW/oAk3Ujde+z64JMfNm19DhpXasFR8oJp/9pggYAbYU927HpA+GJsSFJX6adjIRZsCKUqaGWznw==}
     peerDependencies:
       '@nestjs/common': ^8.0.0
@@ -2361,7 +2361,7 @@ packages:
       '@nestjs/common': 8.4.3_5199533202e21c7185c9d97f881e2827
       '@nestjs/core': 8.4.3_00edab75de3d00160109b98add317aa9
       '@nestjs/mapped-types': 1.0.1_d8d8a930f4ff3c017ccc0319fdb79137
-      fastify-swagger: 5.0.0
+      fastify-swagger: 5.1.0
       lodash: 4.17.21
       path-to-regexp: 3.2.0
       reflect-metadata: 0.1.13
@@ -4682,8 +4682,8 @@ packages:
       send: 0.17.2
     dev: false
 
-  /fastify-swagger/5.0.0:
-    resolution: {integrity: sha512-JdOn5CNKLhVPHDHTEpkmUaWNN/Y51R97TlSOICWT1WB41ZO6oiq9eUZIg0fLJABU6QsrcsiUxUkBBuuEL/g8Vw==}
+  /fastify-swagger/5.1.0:
+    resolution: {integrity: sha512-blV4vhuGXrFXo7+yR287D0v4gSxicgOQzfMTWS9nbjA2wIaf+/sxHEmaLUphnKilj3siURb9Bx69gy1eomv8Ng==}
     dependencies:
       fastify-plugin: 3.0.0
       fastify-static: 4.5.0
