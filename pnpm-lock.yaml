@@ -51,7 +51,7 @@ specifiers:
   mongoose: 6.2.9
   nestjs-command: 3.1.1
   nestjs-i18n: 8.3.2
-  nestjs-pino: 2.5.1
+  nestjs-pino: 2.5.2
   nyc: 15.1.0
   pino: 7.9.2
   pino-http: 6.6.0
@@ -95,7 +95,7 @@ dependencies:
   mongoose: 6.2.9
   nestjs-command: 3.1.1_f75011a0bbb39abcf6c6a54003e70645
   nestjs-i18n: 8.3.2_b42440634049fa172012f2ada685c031
-  nestjs-pino: 2.5.1_pino-http@6.6.0
+  nestjs-pino: 2.5.2_ad877ff2944c7d291ea19ead40d8c229
   pino: 7.9.2
   pino-http: 6.6.0
   redis-commands: 1.7.0
@@ -7068,13 +7068,15 @@ packages:
       string-format: 2.0.0
     dev: false
 
-  /nestjs-pino/2.5.1_pino-http@6.6.0:
-    resolution: {integrity: sha512-sjglwyvnv83MXalYogehs3uSPsc+DUJYXkEdERrzQgD02lwqZdExNL+jamhJpIA+NSNdyXVll8WwXMK1S+tBew==}
+  /nestjs-pino/2.5.2_ad877ff2944c7d291ea19ead40d8c229:
+    resolution: {integrity: sha512-CJDiHRLJTucpgi5blY98Hh+2lj21fhKksyVR3R7ObOhM+/9tf+kmX02LuIL/eot+oYEPzLhHuTqVegL/kiDk6g==}
     engines: {node: '>=12.17.0 || >=13.10.0'}
     requiresBuild: true
     peerDependencies:
+      '@nestjs/common': ^8.0.0
       pino-http: ^6.4.0
     dependencies:
+      '@nestjs/common': 8.4.3_5199533202e21c7185c9d97f881e2827
       pino-http: 6.6.0
     dev: false
 
