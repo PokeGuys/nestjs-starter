@@ -68,7 +68,7 @@
     "rimraf": "3.0.2",
     "rxjs": "7.5.5",
     "uuid": "8.3.2",
-    "yargs": "17.4.0"
+    "yargs": "17.4.1"
   },
   "devDependencies": {
     "@commitlint/cli": "16.2.3",
