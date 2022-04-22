@@ -1,5 +1,5 @@
 # Installer Stage
-FROM node:17-alpine AS installer
+FROM node:18-alpine AS installer
 
 ## Create app directory
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN pnpm --frozen-lockfile --prod
 COPY . .
 
 # Build Stage
-FROM node:17-alpine AS builder
+FROM node:18-alpine AS builder
 
 ## Create app directory
 WORKDIR /app
