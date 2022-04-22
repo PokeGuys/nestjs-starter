@@ -20,7 +20,7 @@ specifiers:
   '@nestjs/testing': 8.4.4
   '@types/ioredis': 4.28.10
   '@types/jest': 27.4.1
-  '@types/lodash.pick': 4.4.6
+  '@types/lodash.pick': 4.4.7
   '@types/node': 16.11.27
   '@types/supertest': 2.0.12
   '@types/uuid': 8.3.4
@@ -115,7 +115,7 @@ devDependencies:
   '@nestjs/testing': 8.4.4_a78378ec5f3cecc3c353ed91b578f3e6
   '@types/ioredis': 4.28.10
   '@types/jest': 27.4.1
-  '@types/lodash.pick': 4.4.6
+  '@types/lodash.pick': 4.4.7
   '@types/node': 16.11.27
   '@types/supertest': 2.0.12
   '@types/uuid': 8.3.4
@@ -2653,8 +2653,8 @@ packages:
     resolution: {integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=}
     dev: true
 
-  /@types/lodash.pick/4.4.6:
-    resolution: {integrity: sha512-u8bzA16qQ+8dY280z3aK7PoWb3fzX5ATJ0rJB6F+uqchOX2VYF02Aqa+8aYiHiHgPzQiITqCgeimlyKFy4OA6g==}
+  /@types/lodash.pick/4.4.7:
+    resolution: {integrity: sha512-HgdyKz7/1+oeoVzbpu1XiX/Bti9AUksHtOILH38T07aKvqoirzcdOsrO2+Yg3L51Hv/8m1MetvHZEUGeABiTiQ==}
     dependencies:
       '@types/lodash': 4.14.178
     dev: true
