@@ -39,7 +39,7 @@ specifiers:
   eslint-plugin-prettier: 4.0.0
   eslint-plugin-promise: 6.0.0
   fastify: 3.28.0
-  fastify-swagger: 5.1.1
+  fastify-swagger: 5.2.0
   firebase-admin: 10.1.0
   husky: 7.0.4
   ioredis: 4.28.5
@@ -81,13 +81,13 @@ dependencies:
   '@nestjs/core': 8.4.4_7670df531e7a1503cdbe395599f41db7
   '@nestjs/mongoose': 9.0.3_785cad368e484ab738fff028a1da2a16
   '@nestjs/platform-fastify': 8.4.4_a78378ec5f3cecc3c353ed91b578f3e6
-  '@nestjs/swagger': 5.2.1_2c8a32c72131f94b25fb8701680b7cda
+  '@nestjs/swagger': 5.2.1_622f68611d101a39e707afe12407b5e2
   '@nestjs/terminus': 8.0.6_241cb6a4085d63233d36725823a84b39
   class-transformer: 0.5.1
   class-validator: 0.13.2
   date-fns: 2.28.0
   fastify: 3.28.0
-  fastify-swagger: 5.1.1
+  fastify-swagger: 5.2.0
   firebase-admin: 10.1.0
   ioredis: 4.28.5
   ioredis-mock: 7.2.0_ioredis@4.28.5
@@ -2312,7 +2312,7 @@ packages:
       - chokidar
     dev: true
 
-  /@nestjs/swagger/5.2.1_2c8a32c72131f94b25fb8701680b7cda:
+  /@nestjs/swagger/5.2.1_622f68611d101a39e707afe12407b5e2:
     resolution: {integrity: sha512-7dNa08WCnTsW/oAk3Ujde+z64JMfNm19DhpXasFR8oJp/9pggYAbYU927HpA+GJsSFJX6adjIRZsCKUqaGWznw==}
     peerDependencies:
       '@nestjs/common': ^8.0.0
@@ -2329,7 +2329,7 @@ packages:
       '@nestjs/common': 8.4.4_5199533202e21c7185c9d97f881e2827
       '@nestjs/core': 8.4.4_7670df531e7a1503cdbe395599f41db7
       '@nestjs/mapped-types': 1.0.1_5a485a6776bce4bf38c75aafd7cb3504
-      fastify-swagger: 5.1.1
+      fastify-swagger: 5.2.0
       lodash: 4.17.21
       path-to-regexp: 3.2.0
       reflect-metadata: 0.1.13
@@ -4728,6 +4728,15 @@ packages:
       json-schema-resolver: 1.3.0
       openapi-types: 10.0.0
       rfdc: 1.3.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /fastify-swagger/5.2.0:
+    resolution: {integrity: sha512-yKct50Mev9YIrhd2FRO4AChcJM9JwTBCziIjA4C+AI+hV2ystaIklgHVEwHoyqlaeQ+B4gZ1Z5rgOE87i4llLg==}
+    dependencies:
+      fastify-swagger-deprecated: /fastify-swagger/5.1.1
+      process-warning: 1.0.0
     transitivePeerDependencies:
       - supports-color
     dev: false
