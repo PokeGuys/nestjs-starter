@@ -50,7 +50,7 @@ specifiers:
   lodash.pick: 4.4.0
   mongoose: 6.3.3
   nestjs-command: 3.1.1
-  nestjs-i18n: 8.3.2
+  nestjs-i18n: 9.0.12
   nestjs-pino: 2.5.2
   pino: 7.11.0
   pino-http: 6.6.0
@@ -93,7 +93,7 @@ dependencies:
   lodash.pick: 4.4.0
   mongoose: 6.3.3
   nestjs-command: 3.1.1_w37unfivrgfj5v47ebmqrrc5xi
-  nestjs-i18n: 8.3.2_eytixgx7jhe46hy745cjiftomq
+  nestjs-i18n: 9.0.12_uhh3tewiqkpepb3tatujd6plye
   nestjs-pino: 2.5.2_x47msqn3c2wyfydtswd2okfdqa
   pino: 7.11.0
   pino-http: 6.6.0
@@ -6885,18 +6885,22 @@ packages:
       yargs: 17.5.0
     dev: false
 
-  /nestjs-i18n/8.3.2_eytixgx7jhe46hy745cjiftomq:
-    resolution: {integrity: sha512-9JDqhRt9tqL7zblm41s+PHQ+OO4tYcMHr4qsBR0sarl0eLJ5NXOEesONIR04JmCIIQjbUMXFJtBr1xXurgEfcA==}
+  /nestjs-i18n/9.0.12_uhh3tewiqkpepb3tatujd6plye:
+    resolution: {integrity: sha512-06dCzZdLYYGYec0JMCQi96UnlpfpffBExC1cnVIfHL+LKLRHrHgbvH7rAvzI+YszFioSSsXcRcB67vHWYJUxnw==}
     peerDependencies:
       '@nestjs/common': '*'
       '@nestjs/core': '*'
+      class-validator: ~0.13
       rxjs: '*'
     dependencies:
       '@nestjs/common': 8.4.4_kgmvgmqc4iohdboj3f7yqhrie4
       '@nestjs/core': 8.4.4_ozyn6uy6pikqhtn6hfkzt5a5w4
       accept-language-parser: 1.5.0
       chokidar: 3.5.3
+      class-validator: 0.13.2
       cookie: 0.4.2
+      iterare: 1.2.1
+      js-yaml: 4.1.0
       rxjs: 7.5.5
       string-format: 2.0.0
     dev: false
