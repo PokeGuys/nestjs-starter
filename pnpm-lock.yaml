@@ -68,7 +68,7 @@ specifiers:
   tsconfig-paths: 3.14.1
   typescript: 4.6.4
   uuid: 8.3.2
-  yargs: 17.4.1
+  yargs: 17.5.0
 
 dependencies:
   '@aws-sdk/client-s3': 3.88.0
@@ -92,7 +92,7 @@ dependencies:
   ioredis-mock: 7.4.0_ioredis@4.28.5
   lodash.pick: 4.4.0
   mongoose: 6.3.3
-  nestjs-command: 3.1.1_4de4xifs33i7um4qlebh3fwqem
+  nestjs-command: 3.1.1_w37unfivrgfj5v47ebmqrrc5xi
   nestjs-i18n: 8.3.2_eytixgx7jhe46hy745cjiftomq
   nestjs-pino: 2.5.2_x47msqn3c2wyfydtswd2okfdqa
   pino: 7.11.0
@@ -103,7 +103,7 @@ dependencies:
   rimraf: 3.0.2
   rxjs: 7.5.5
   uuid: 8.3.2
-  yargs: 17.4.1
+  yargs: 17.5.0
 
 devDependencies:
   '@commitlint/cli': 16.2.4
@@ -1411,7 +1411,7 @@ packages:
       lodash: 4.17.21
       resolve-from: 5.0.0
       resolve-global: 1.0.0
-      yargs: 17.4.1
+      yargs: 17.5.0
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -5806,7 +5806,7 @@ packages:
       jest-util: 28.1.0
       jest-validate: 28.1.0
       prompts: 2.4.2
-      yargs: 17.4.1
+      yargs: 17.5.0
     transitivePeerDependencies:
       - '@types/node'
       - supports-color
@@ -6870,7 +6870,7 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /nestjs-command/3.1.1_4de4xifs33i7um4qlebh3fwqem:
+  /nestjs-command/3.1.1_w37unfivrgfj5v47ebmqrrc5xi:
     resolution: {integrity: sha512-jis8nS0QNZkw35BzBlkkOqty4BJcomUZdmIyne+HjSdk0CwIy6PzXkhGiUIPySBwoK/6d4OxjFQckVoNB/H0TA==}
     hasBin: true
     peerDependencies:
@@ -6882,7 +6882,7 @@ packages:
       '@nestjs/core': 8.4.4_ozyn6uy6pikqhtn6hfkzt5a5w4
       lodash.compact: 3.0.1
       lodash.flattendeep: 4.4.0
-      yargs: 17.4.1
+      yargs: 17.5.0
     dev: false
 
   /nestjs-i18n/8.3.2_eytixgx7jhe46hy745cjiftomq:
@@ -8888,8 +8888,8 @@ packages:
     dev: false
     optional: true
 
-  /yargs/17.4.1:
-    resolution: {integrity: sha512-WSZD9jgobAg3ZKuCQZSa3g9QOJeCCqLoLAykiWgmXnDo9EPnn4RPf5qVTtzgOx66o6/oqhcA5tHtJXpG8pMt3g==}
+  /yargs/17.5.0:
+    resolution: {integrity: sha512-3sLxVhbAB5OC8qvVRebCLWuouhwh/rswsiDYx3WGxajUk/l4G20SKfrKKFeNIHboUFt2JFgv2yfn+5cgOr/t5A==}
     engines: {node: '>=12'}
     dependencies:
       cliui: 7.0.4
