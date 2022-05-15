@@ -65,7 +65,7 @@ specifiers:
   supertest: 6.2.3
   ts-jest: 28.0.2
   ts-node: 10.7.0
-  tsconfig-paths: 3.14.1
+  tsconfig-paths: 4.0.0
   typescript: 4.6.4
   uuid: 8.3.2
   yargs: 17.5.0
@@ -139,7 +139,7 @@ devDependencies:
   supertest: 6.2.3
   ts-jest: 28.0.2_qy5m32hwmbz5mebulkdtchzcz4
   ts-node: 10.7.0_h4tw2vgfqmmy4uhtcfuxwgfqbm
-  tsconfig-paths: 3.14.1
+  tsconfig-paths: 4.0.0
   typescript: 4.6.4
 
 packages:
@@ -8504,6 +8504,14 @@ packages:
     dependencies:
       '@types/json5': 0.0.29
       json5: 1.0.1
+      minimist: 1.2.6
+      strip-bom: 3.0.0
+    dev: true
+
+  /tsconfig-paths/4.0.0:
+    resolution: {integrity: sha512-SLBg2GBKlR6bVtMgJJlud/o3waplKtL7skmLkExomIiaAtLGtVsoXIqP3SYdjbcH9lq/KVv7pMZeCBpLYOit6Q==}
+    dependencies:
+      json5: 2.2.1
       minimist: 1.2.6
       strip-bom: 3.0.0
     dev: true
