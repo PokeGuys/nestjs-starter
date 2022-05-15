@@ -1,7 +1,7 @@
-import IORedis from 'ioredis';
+import type { NatMap } from 'ioredis';
 
 export type RedisClusterConfig = {
-  natMap?: IORedis.NatMap;
+  natMap?: NatMap;
 };
 
 export type RedisConfig = {
