@@ -16,7 +16,6 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "coverage:merge": "pnpm run test:unit:cov && pnpm run test:e2e:cov && nyc merge .nyc_output coverage.json",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "lint:check": "eslint \"{src,apps,libs,test}/**/*.ts\"",
@@ -98,7 +97,6 @@
     "is-ci": "3.0.1",
     "jest": "27.5.1",
     "lint-staged": "12.4.1",
-    "nyc": "15.1.0",
     "prettier": "2.6.2",
     "sort-package-json": "1.55.0",
     "source-map-support": "0.5.21",
@@ -111,5 +109,13 @@
   "engines": {
     "node": ">=16.0.0",
     "pnpm": ">=6"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@firebase/app-compat",
+        "@firebase/app-types"
+      ]
+    }
   }
 }
