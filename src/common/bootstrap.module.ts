@@ -20,11 +20,11 @@ import {
 } from '@common/util/logger.util';
 import {
   I18nModule,
-  I18nJsonParser,
   QueryResolver,
   HeaderResolver,
   AcceptLanguageResolver,
   CookieResolver,
+  I18nJsonLoader,
 } from 'nestjs-i18n';
 import { MongooseModule } from '@nestjs/mongoose';
 import { stdSerializers } from 'pino';
@@ -72,12 +72,12 @@ import { Language } from './enum';
       useFactory: (config: ConfigService) => {
         return {
           fallbackLanguage: config.get<string>('app.fallbackLanguage', Language.English),
-          parserOptions: {
+          loaderOptions: {
             path: path.join(__dirname, '/i18n/'),
           },
         };
       },
-      parser: I18nJsonParser,
+      loader: I18nJsonLoader,
       resolvers: [
         { use: QueryResolver, options: ['lang', 'locale', 'l'] },
         new HeaderResolver(['x-locale']),
