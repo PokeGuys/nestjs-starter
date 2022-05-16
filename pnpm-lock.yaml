@@ -37,7 +37,7 @@ specifiers:
   eslint-plugin-jest: 26.1.5
   eslint-plugin-prettier: 4.0.0
   eslint-plugin-promise: 6.0.0
-  fastify: 3.28.0
+  fastify: 3.29.0
   fastify-swagger: 5.2.0
   firebase-admin: 10.2.0
   husky: 8.0.1
@@ -84,7 +84,7 @@ dependencies:
   class-transformer: 0.5.1
   class-validator: 0.13.2
   date-fns: 2.28.0
-  fastify: 3.28.0
+  fastify: 3.29.0
   fastify-swagger: 5.2.0
   firebase-admin: 10.2.0
   ioredis: 5.0.4
@@ -3300,7 +3300,7 @@ packages:
       picomatch: 2.3.1
 
   /archy/1.0.0:
-    resolution: {integrity: sha1-+cjBN1fMHde8N5rHeyxipcKGjEA=}
+    resolution: {integrity: sha512-Xg+9RwCg/0p32teKdGMPTPnVXKD0w3DfHnFTficozsAgsvq2XenPJq/MYpzzQ/v8zrOyJn6Ds39VA4JIDwFfqw==}
     dev: false
 
   /arg/4.1.3:
@@ -4729,10 +4729,6 @@ packages:
       process-warning: 1.0.0
     dev: false
 
-  /fastify-error/0.3.1:
-    resolution: {integrity: sha512-oCfpcsDndgnDVgiI7bwFKAun2dO+4h84vBlkWsWnz/OUK9Reff5UFoFl241xTiLeHWX/vU9zkDVXqYUxjOwHcQ==}
-    dev: false
-
   /fastify-formbody/5.2.0:
     resolution: {integrity: sha512-d8Y5hCL82akPyoFiXh2wYOm3es0pV9jqoPo3pO9OV2cNF0cQx39J5WAVXzCh4MSt9Z2qF4Fy5gHlvlyESwjtvg==}
     dependencies:
@@ -4784,28 +4780,6 @@ packages:
     dependencies:
       fastify-swagger-deprecated: /fastify-swagger/5.1.1
       process-warning: 1.0.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
-  /fastify/3.28.0:
-    resolution: {integrity: sha512-LAQtGllpkRe8L6Tpf3zdbvXzXFOrgaWV3Tbvp3xMv9ngcr9zht9U2/mo5zq9qp9kplSiBJ0w43aVAMqv6PBMbw==}
-    dependencies:
-      '@fastify/ajv-compiler': 1.1.0
-      abstract-logging: 2.0.1
-      avvio: 7.2.5
-      fast-json-stringify: 2.7.13
-      fastify-error: 0.3.1
-      find-my-way: 4.5.1
-      flatstr: 1.0.12
-      light-my-request: 4.10.1
-      pino: 6.14.0
-      process-warning: 1.0.0
-      proxy-addr: 2.0.7
-      rfdc: 1.3.0
-      secure-json-parse: 2.4.0
-      semver: 7.3.7
-      tiny-lru: 8.0.2
     transitivePeerDependencies:
       - supports-color
     dev: false
