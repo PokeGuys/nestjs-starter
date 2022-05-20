@@ -41,7 +41,7 @@ specifiers:
   fastify-swagger: 5.2.0
   firebase-admin: 10.2.0
   husky: 8.0.1
-  ioredis: 5.0.4
+  ioredis: 5.0.5
   ioredis-mock: 8.2.0
   is-ci: 3.0.1
   jest: 28.1.0
@@ -87,8 +87,8 @@ dependencies:
   fastify: 3.29.0
   fastify-swagger: 5.2.0
   firebase-admin: 10.2.0
-  ioredis: 5.0.4
-  ioredis-mock: 8.2.0_ioredis@5.0.4
+  ioredis: 5.0.5
+  ioredis-mock: 8.2.0_ioredis@5.0.5
   lodash.pick: 4.4.0
   mongoose: 6.3.3
   nestjs-command: 3.1.1_ailyiarczign46ayhf66gsuuzm
@@ -5447,7 +5447,7 @@ packages:
     engines: {node: '>= 0.10'}
     dev: false
 
-  /ioredis-mock/8.2.0_ioredis@5.0.4:
+  /ioredis-mock/8.2.0_ioredis@5.0.5:
     resolution: {integrity: sha512-yW0qTVtEn7VH3sRWHH0HYtebo9sIdfh53uLWxg8sX77o3WnbIM294F7KJtR9kpZdti7vzsPnO8ivQudGQTNvKA==}
     engines: {node: '>=12'}
     peerDependencies:
@@ -5457,11 +5457,11 @@ packages:
       '@ioredis/commands': 1.1.1
       fengari: 0.1.4
       fengari-interop: 0.1.3_fengari@0.1.4
-      ioredis: 5.0.4
+      ioredis: 5.0.5
     dev: false
 
-  /ioredis/5.0.4:
-    resolution: {integrity: sha512-qFJw3MnPNsJF1lcIOP3vztbsasOXK3nDdNAgjQj7t7/Bn/w10PGchTOpqylQNxjzPbLoYDu34LjeJtSWiKBntQ==}
+  /ioredis/5.0.5:
+    resolution: {integrity: sha512-H+u9YB/cBckDO5lt5+S34gGN1EuIBjjaXk31LivQWfX3G1cqZPYCiwF9qCOkqK2NsKVk+saoUN+fLBz5tc2gFw==}
     engines: {node: '>=12.22.0'}
     dependencies:
       '@ioredis/commands': 1.1.1
