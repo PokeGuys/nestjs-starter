@@ -49,7 +49,7 @@ specifiers:
   lodash.pick: 4.4.0
   mongoose: 6.3.4
   nestjs-command: 3.1.1
-  nestjs-i18n: 9.0.12
+  nestjs-i18n: 9.0.13
   nestjs-pino: 2.6.0
   pino: 7.11.0
   pino-http: 6.6.0
@@ -92,7 +92,7 @@ dependencies:
   lodash.pick: 4.4.0
   mongoose: 6.3.4
   nestjs-command: 3.1.1_ailyiarczign46ayhf66gsuuzm
-  nestjs-i18n: 9.0.12_xaii4g4jdrcuw2gzhj37ktg6z4
+  nestjs-i18n: 9.0.13_xaii4g4jdrcuw2gzhj37ktg6z4
   nestjs-pino: 2.6.0_zpk665cjgcbdcrmgijhuy5q7oa
   pino: 7.11.0
   pino-http: 6.6.0
@@ -3131,7 +3131,7 @@ packages:
     dev: false
 
   /accept-language-parser/1.5.0:
-    resolution: {integrity: sha1-iHfFQECo3LWeCgfZwf3kIpgzR5E=}
+    resolution: {integrity: sha512-QhyTbMLYo0BBGg1aWbeMG4ekWtds/31BrEU+DONOg/7ax23vxpL03Pb7/zBmha2v7vdD3AyzZVWBVGEZxKOXWw==}
     dev: false
 
   /acorn-import-assertions/1.8.0_acorn@8.7.1:
@@ -6845,8 +6845,8 @@ packages:
       yargs: 17.5.1
     dev: false
 
-  /nestjs-i18n/9.0.12_xaii4g4jdrcuw2gzhj37ktg6z4:
-    resolution: {integrity: sha512-06dCzZdLYYGYec0JMCQi96UnlpfpffBExC1cnVIfHL+LKLRHrHgbvH7rAvzI+YszFioSSsXcRcB67vHWYJUxnw==}
+  /nestjs-i18n/9.0.13_xaii4g4jdrcuw2gzhj37ktg6z4:
+    resolution: {integrity: sha512-6HOQJETPGRL9RWSTM20vbov1N5XlDHqf0fF2n5lz1FEkl5cfQcKgPLbhmb6g7T42ocCYEOa7FOOBfiqN/wcZmA==}
     peerDependencies:
       '@nestjs/common': '*'
       '@nestjs/core': '*'
