@@ -62,7 +62,7 @@ specifiers:
   sort-package-json: 1.57.0
   source-map-support: 0.5.21
   supertest: 6.2.3
-  ts-jest: 28.0.2
+  ts-jest: 28.0.3
   ts-node: 10.8.0
   tsconfig-paths: 4.0.0
   typescript: 4.6.4
@@ -135,7 +135,7 @@ devDependencies:
   sort-package-json: 1.57.0
   source-map-support: 0.5.21
   supertest: 6.2.3
-  ts-jest: 28.0.2_qy5m32hwmbz5mebulkdtchzcz4
+  ts-jest: 28.0.3_qy5m32hwmbz5mebulkdtchzcz4
   ts-node: 10.8.0_rbv5fvwh3qaahz6dxcho7rzsry
   tsconfig-paths: 4.0.0
   typescript: 4.6.4
@@ -8382,8 +8382,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /ts-jest/28.0.2_qy5m32hwmbz5mebulkdtchzcz4:
-    resolution: {integrity: sha512-IOZMb3D0gx6IHO9ywPgiQxJ3Zl4ECylEFwoVpENB55aTn5sdO0Ptyx/7noNBxAaUff708RqQL4XBNxxOVjY0vQ==}
+  /ts-jest/28.0.3_qy5m32hwmbz5mebulkdtchzcz4:
+    resolution: {integrity: sha512-HzgbEDQ2KgVtDmpXToqAcKTyGHdHsG23i/iUjfxji92G5eT09S1m9UHZd7csF0Bfgh9txM4JzwHnv7r1waFPlw==}
     engines: {node: ^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0}
     hasBin: true
     peerDependencies:
