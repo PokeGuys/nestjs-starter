@@ -45,7 +45,7 @@ specifiers:
   ioredis-mock: 8.2.0
   is-ci: 3.0.1
   jest: 28.1.0
-  lint-staged: 12.4.1
+  lint-staged: 12.4.2
   lodash.pick: 4.4.0
   mongoose: 6.3.4
   nestjs-command: 3.1.1
@@ -130,7 +130,7 @@ devDependencies:
   husky: 8.0.1
   is-ci: 3.0.1
   jest: 28.1.0_2cnx3q6hfnpx7nryv75xx7ahte
-  lint-staged: 12.4.1
+  lint-staged: 12.4.2
   prettier: 2.6.2
   sort-package-json: 1.57.0
   source-map-support: 0.5.21
@@ -6422,8 +6422,8 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
-  /lint-staged/12.4.1:
-    resolution: {integrity: sha512-PTXgzpflrQ+pODQTG116QNB+Q6uUTDg5B5HqGvNhoQSGt8Qy+MA/6zSnR8n38+sxP5TapzeQGTvoKni0KRS8Vg==}
+  /lint-staged/12.4.2:
+    resolution: {integrity: sha512-JAJGIzY/OioIUtrRePr8go6qUxij//mL+RGGoFKU3VWQRtIHgWoHizSqH0QVn2OwrbXS9Q6CICQjfj+E5qvrXg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
