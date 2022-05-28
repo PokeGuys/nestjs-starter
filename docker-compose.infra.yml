@@ -62,7 +62,7 @@ services:
       - 29600:9600
 
   kibana:
-    image: opensearchproject/opensearch-dashboards:1.3.2
+    image: opensearchproject/opensearch-dashboards:2.0.0
     environment:
       OPENSEARCH_URL: https://opensearch:9200
       OPENSEARCH_HOSTS: https://opensearch:9200
