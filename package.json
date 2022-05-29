@@ -35,7 +35,7 @@
     "test:unit:watch": "jest --watch"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "3.95.0",
+    "@aws-sdk/client-s3": "3.100.0",
     "@mikro-orm/core": "5.1.4",
     "@mikro-orm/nestjs": "5.0.1",
     "@mikro-orm/postgresql": "5.1.4",
