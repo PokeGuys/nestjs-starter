@@ -55,7 +55,7 @@
     "ioredis": "5.0.5",
     "ioredis-mock": "8.2.2",
     "lodash.pick": "4.4.0",
-    "mongoose": "6.3.4",
+    "mongoose": "6.3.5",
     "nestjs-command": "3.1.1",
     "nestjs-i18n": "9.1.1",
     "nestjs-pino": "2.6.0",
