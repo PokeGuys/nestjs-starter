@@ -52,7 +52,7 @@
     "fastify": "3.29.0",
     "fastify-swagger": "5.2.0",
     "firebase-admin": "10.2.0",
-    "ioredis": "5.0.5",
+    "ioredis": "5.0.6",
     "ioredis-mock": "8.2.2",
     "lodash.pick": "4.4.0",
     "mongoose": "6.3.5",
