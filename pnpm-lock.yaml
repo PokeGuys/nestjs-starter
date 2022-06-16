@@ -47,7 +47,7 @@ specifiers:
   jest: 28.1.1
   lint-staged: 13.0.1
   lodash.pick: 4.4.0
-  mongoose: 6.3.6
+  mongoose: 6.3.8
   nestjs-command: 3.1.1
   nestjs-i18n: 9.1.1
   nestjs-pino: 2.6.0
@@ -77,7 +77,7 @@ dependencies:
   '@nestjs/common': 8.4.6_kgmvgmqc4iohdboj3f7yqhrie4
   '@nestjs/config': 2.1.0_qna2ix3wuyhvmc56wewcijj25m
   '@nestjs/core': 8.4.6_qna2ix3wuyhvmc56wewcijj25m
-  '@nestjs/mongoose': 9.1.0_dz3ncj7uyg6etp4dof5i7o7sk4
+  '@nestjs/mongoose': 9.1.0_77q7nuqafga32fdg5mf46tql2m
   '@nestjs/platform-fastify': 8.4.6_etfae4mmenqzp3rs3pua7csngy
   '@nestjs/swagger': 5.2.1_vk3dnardkkk7yl2azygupnlape
   '@nestjs/terminus': 8.0.6_ylfx5swiot7inr3kdyigrsa54e
@@ -90,7 +90,7 @@ dependencies:
   ioredis: 5.0.6
   ioredis-mock: 8.2.2_ioredis@5.0.6
   lodash.pick: 4.4.0
-  mongoose: 6.3.6
+  mongoose: 6.3.8
   nestjs-command: 3.1.1_6i4sjuv6z2mdtervqqgpu6ntjq
   nestjs-i18n: 9.1.1_nfp2jolc7cbmfttdsnkgdrmyea
   nestjs-pino: 2.6.0_nxqiivvfsjrxcrimygizt4xrxa
@@ -2354,7 +2354,7 @@ packages:
       reflect-metadata: 0.1.13
     dev: false
 
-  /@nestjs/mongoose/9.1.0_dz3ncj7uyg6etp4dof5i7o7sk4:
+  /@nestjs/mongoose/9.1.0_77q7nuqafga32fdg5mf46tql2m:
     resolution: {integrity: sha512-tkd5ZD7UYreHv/OaEcdgbsiwywmXuAwzcD3u/kGAGE8c4dyutkc09LxNGsp9q0+NdV0EK3NauICNLWspF7S+wA==}
     peerDependencies:
       '@nestjs/common': ^6.0.0 || ^7.0.0 || ^8.0.0
@@ -2365,7 +2365,7 @@ packages:
     dependencies:
       '@nestjs/common': 8.4.6_kgmvgmqc4iohdboj3f7yqhrie4
       '@nestjs/core': 8.4.6_qna2ix3wuyhvmc56wewcijj25m
-      mongoose: 6.3.6
+      mongoose: 6.3.8
       reflect-metadata: 0.1.13
       rxjs: 7.5.5
     dev: false
@@ -6822,8 +6822,8 @@ packages:
       saslprep: 1.0.3
     dev: false
 
-  /mongoose/6.3.6:
-    resolution: {integrity: sha512-/Cixfo+bA32EHQ5Y7sxMj5ZOXFiAFlvA3X4mFruUET9OsbJZfstg4n2FzxovX8Q7EcoQ7Ry1bnOp9AeXtodF7w==}
+  /mongoose/6.3.8:
+    resolution: {integrity: sha512-TPIm61/DR2Go+aDXD5HM6vwMvl4dEOFos1oTT4yPT8qJpcTugxWXf5J2Vp+0vzqDETfDMtN/gBhPCzFdFJx2bg==}
     engines: {node: '>=12.0.0'}
     dependencies:
       bson: 4.6.3
