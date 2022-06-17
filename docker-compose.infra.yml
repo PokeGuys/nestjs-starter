@@ -50,7 +50,7 @@ services:
       - '${RABBITMQ_MANAGEMENT_HTTP_HOST_PORT:-15672}:15672'
 
   opensearch:
-    image: opensearchproject/opensearch:2.0.0
+    image: opensearchproject/opensearch:2.0.1
     environment:
       - discovery.type=single-node
       - bootstrap.memory_lock=true # along with the memlock settings below, disables swapping
