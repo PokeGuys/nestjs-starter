@@ -49,7 +49,7 @@ specifiers:
   lodash.pick: 4.4.0
   mongoose: 6.4.0
   nestjs-command: 3.1.1
-  nestjs-i18n: 9.1.1
+  nestjs-i18n: 9.1.2
   nestjs-pino: 2.6.0
   pino: 8.0.0
   pino-http: 6.6.0
@@ -92,7 +92,7 @@ dependencies:
   lodash.pick: 4.4.0
   mongoose: 6.4.0
   nestjs-command: 3.1.1_lpw66eu34r2wk3ikvcshk55mlm
-  nestjs-i18n: 9.1.1_txqmyk4q2m7ssjvc6p66dzxnzq
+  nestjs-i18n: 9.1.2_txqmyk4q2m7ssjvc6p66dzxnzq
   nestjs-pino: 2.6.0_4756f6xkoo63bcgemzeb3lkerm
   pino: 8.0.0
   pino-http: 6.6.0
@@ -6847,8 +6847,8 @@ packages:
       yargs: 17.5.1
     dev: false
 
-  /nestjs-i18n/9.1.1_txqmyk4q2m7ssjvc6p66dzxnzq:
-    resolution: {integrity: sha512-u9HRnRjaxlqOXzj+l5ExLL82wBNYd7sNIIqBzty7jgnqNT2R2uCNFMPKIC64EyTPmIc8smWS5Jm8YyImZdGMzA==}
+  /nestjs-i18n/9.1.2_txqmyk4q2m7ssjvc6p66dzxnzq:
+    resolution: {integrity: sha512-5DDmhmjdslK1BBav7czfWVGV15WLDmyRBBMUCzvirGgWQAGVcoEm0LoV7iKIAOBzZAHHlRJVuxARvNXvZtXtBA==}
     peerDependencies:
       '@nestjs/common': '*'
       '@nestjs/core': '*'
