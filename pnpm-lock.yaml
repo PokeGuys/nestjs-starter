@@ -5,9 +5,9 @@ specifiers:
   '@commitlint/cli': 17.0.2
   '@commitlint/config-angular': 17.0.0
   '@commitlint/config-conventional': 17.0.2
-  '@mikro-orm/core': 5.2.0
+  '@mikro-orm/core': 5.2.1
   '@mikro-orm/nestjs': 5.0.2
-  '@mikro-orm/postgresql': 5.2.0
+  '@mikro-orm/postgresql': 5.2.1
   '@nestjs/cli': 8.2.6
   '@nestjs/common': 8.4.7
   '@nestjs/config': 2.1.0
@@ -71,9 +71,9 @@ specifiers:
 
 dependencies:
   '@aws-sdk/client-s3': 3.113.0
-  '@mikro-orm/core': 5.2.0_jarqmzkeqyuhyvropd7epccegq
-  '@mikro-orm/nestjs': 5.0.2_c4ppzrb2ydym3rltbtq2uhuosy
-  '@mikro-orm/postgresql': 5.2.0_@mikro-orm+core@5.2.0
+  '@mikro-orm/core': 5.2.1_kmodzzimkd3g7k6coq52f53pwu
+  '@mikro-orm/nestjs': 5.0.2_sjg6repryg7t4dvbwqg27cbz24
+  '@mikro-orm/postgresql': 5.2.1_@mikro-orm+core@5.2.1
   '@nestjs/common': 8.4.7_kgmvgmqc4iohdboj3f7yqhrie4
   '@nestjs/config': 2.1.0_g7av3gvncewo44y4rurz3mgav4
   '@nestjs/core': 8.4.7_g7av3gvncewo44y4rurz3mgav4
@@ -2065,8 +2065,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.13
     dev: true
 
-  /@mikro-orm/core/5.2.0_jarqmzkeqyuhyvropd7epccegq:
-    resolution: {integrity: sha512-4R2JE7NCRSPgvIAXLQFE+unvRMd8SrCQjs4fs62R5LqhRlbhS+FjY332dmXldq6iGoQ5JkuZhBKiSLV/2X12Mg==}
+  /@mikro-orm/core/5.2.1_kmodzzimkd3g7k6coq52f53pwu:
+    resolution: {integrity: sha512-p6+fdltIP8DfGSnxWO8yE5c71VsDxogSrk9BAlfry+4KQKQLWEiogJ+zuVCGVTB1xozczNCgRIA8ZYAjHnnBPg==}
     engines: {node: '>= 14.0.0'}
     peerDependencies:
       '@mikro-orm/better-sqlite': ^5.0.0
@@ -2098,7 +2098,7 @@ packages:
       '@mikro-orm/sqlite':
         optional: true
     dependencies:
-      '@mikro-orm/postgresql': 5.2.0_@mikro-orm+core@5.2.0
+      '@mikro-orm/postgresql': 5.2.1_@mikro-orm+core@5.2.1
       dotenv: 16.0.1
       escaya: 0.0.61
       fs-extra: 10.1.0
@@ -2107,8 +2107,8 @@ packages:
       reflect-metadata: 0.1.13
     dev: false
 
-  /@mikro-orm/knex/5.2.0_lgtu3aepwwx2r7xo6i5qqcrf4m:
-    resolution: {integrity: sha512-2NakQSxUGFjsm3TKwMRgWecKUruALK9TnxKGnah3CgNp+nspwQe6G73HvB0zXUEHBslY68CE/ih3qkFMivAAaQ==}
+  /@mikro-orm/knex/5.2.1_7sdbnis6afavnnwbei65ug5zhq:
+    resolution: {integrity: sha512-Lw91BqftBZZqJ9LEA62x84TF8akC6H4UfRIAXPnE+95JM6kQ+kWy7WTCI2n6v/PrzFyeNShOvPRnHpdOXpnzKQ==}
     engines: {node: '>= 14.0.0'}
     peerDependencies:
       '@mikro-orm/core': ^5.0.0
@@ -2138,7 +2138,7 @@ packages:
       sqlite3:
         optional: true
     dependencies:
-      '@mikro-orm/core': 5.2.0_jarqmzkeqyuhyvropd7epccegq
+      '@mikro-orm/core': 5.2.1_kmodzzimkd3g7k6coq52f53pwu
       fs-extra: 10.1.0
       knex: 2.1.0_pg@8.7.3
       pg: 8.7.3
@@ -2149,7 +2149,7 @@ packages:
       - tedious
     dev: false
 
-  /@mikro-orm/nestjs/5.0.2_c4ppzrb2ydym3rltbtq2uhuosy:
+  /@mikro-orm/nestjs/5.0.2_sjg6repryg7t4dvbwqg27cbz24:
     resolution: {integrity: sha512-YqRHOMSn5J2GMc1je4dgKja0hyuf2z73JxzCrfgVlqCzEFhwF7HeuJqVEyLVq1vALck13Kbov/ofCtlGR9LNuw==}
     engines: {node: '>= 14.0.0'}
     peerDependencies:
@@ -2164,13 +2164,13 @@ packages:
       '@mikro-orm/mongodb':
         optional: true
     dependencies:
-      '@mikro-orm/core': 5.2.0_jarqmzkeqyuhyvropd7epccegq
+      '@mikro-orm/core': 5.2.1_kmodzzimkd3g7k6coq52f53pwu
       '@nestjs/common': 8.4.7_kgmvgmqc4iohdboj3f7yqhrie4
       '@nestjs/core': 8.4.7_g7av3gvncewo44y4rurz3mgav4
     dev: false
 
-  /@mikro-orm/postgresql/5.2.0_@mikro-orm+core@5.2.0:
-    resolution: {integrity: sha512-mt23kqxLOpW5yQvu197e8GL/c3gC80otiOxd2QQQQyuzLZJBrtaUPmyBuC37aocmFqRSNLqd4zT1bJ9yiqOL3A==}
+  /@mikro-orm/postgresql/5.2.1_@mikro-orm+core@5.2.1:
+    resolution: {integrity: sha512-D9TpuqKYuJWTEd1E7JLAN8tfj9Pg9ZHJCSTT+ozLYLmMIWPBjwPxyk5C6tsXR8sWawe3h9RSZ1falcVkV11Wkg==}
     engines: {node: '>= 14.0.0'}
     peerDependencies:
       '@mikro-orm/core': ^5.0.0
@@ -2185,8 +2185,8 @@ packages:
       '@mikro-orm/seeder':
         optional: true
     dependencies:
-      '@mikro-orm/core': 5.2.0_jarqmzkeqyuhyvropd7epccegq
-      '@mikro-orm/knex': 5.2.0_lgtu3aepwwx2r7xo6i5qqcrf4m
+      '@mikro-orm/core': 5.2.1_kmodzzimkd3g7k6coq52f53pwu
+      '@mikro-orm/knex': 5.2.1_7sdbnis6afavnnwbei65ug5zhq
       pg: 8.7.3
     transitivePeerDependencies:
       - better-sqlite3
