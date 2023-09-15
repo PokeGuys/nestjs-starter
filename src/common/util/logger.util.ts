@@ -14,7 +14,11 @@ export const requestIdGenerator = (req: IncomingMessage): string =>
   (req.headers[CLOUDFLARE_HEADER_NAME.toLowerCase()] as string) ||
   uuidv4();
 
-export const customLogLevelFormatter = (res: ServerResponse, err: Error): pino.LevelWithSilent => {
+export const customLogLevelFormatter = (
+  _req: IncomingMessage,
+  res: ServerResponse,
+  err?: Error,
+): pino.LevelWithSilent => {
   if (res.statusCode >= 400 && res.statusCode < 500) {
     return 'warn';
   }

@@ -35,8 +35,6 @@ README.md
 .lintstagedrc.json
 .prettierignore
 .prettierrc
-tsconfig.json
-tsconfig.build.json
 
 # Bot configuration files
 .renovaterc

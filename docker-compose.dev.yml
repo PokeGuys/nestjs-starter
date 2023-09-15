@@ -3,26 +3,14 @@ version: '3.9'
 services:
   api:
     build:
-      context: .docker
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: .docker/Dockerfile
     environment:
       - PORT=3000
     ports:
       - '${PORT:-3000}:3000'
     volumes:
       - '.env.demo:/srv/.env'
-
-  mongo-express:
-    image: mongo-express:0.54
-    restart: always
-    environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: root
-      ME_CONFIG_MONGODB_ADMINPASSWORD: example
-      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongodb:27017
-    ports:
-      - '${MONGODB_EXPRESS_PORT:-8081}:8081'
-    depends_on:
-      - mongodb
 
   # Redis Cluster (localhost)
   redis-cluster-localhost-access:

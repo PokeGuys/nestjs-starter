@@ -7,11 +7,16 @@ WORKDIR /app
 ## A wildcard is used to ensure both package.json AND pnpm-lock.yaml are copied
 COPY package.json pnpm-lock.yaml ./
 
+## Install pnpm
+RUN npm install -g pnpm
+
 ## Install app dependencies
-RUN pnpm --frozen-lockfile --prod
+RUN pnpm install --frozen-lockfile
 
 ## Copy all the files
 COPY . .
+
+RUN ls -la
 
 # Build Stage
 FROM node:18-alpine AS builder
@@ -22,11 +27,14 @@ WORKDIR /app
 ## Copy artifacts from installer
 COPY --from=installer /app/. .
 
+## Install pnpm
+RUN npm install -g pnpm
+
 ## Install development dependencies
-RUN yarn
+RUN pnpm install
 
 ## Build application
-RUN yarn build
+RUN pnpm build
 
 ## Create version file
 ARG COMMIT_HASH
